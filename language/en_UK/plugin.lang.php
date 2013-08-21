@@ -1,0 +1,37 @@
+<?php
+$lang['Comments action'] = 'Comments action';
+$lang['Moderate'] = 'Moderate';
+$lang['Activate on'] = 'Activate on';
+$lang['Picture comments'] = 'Picture comments';
+$lang['Album comments'] = 'Album comments';
+$lang['Register form'] = 'Register form';
+$lang['Contact form'] = 'Contact form';
+$lang['Guestbook'] = 'Guestbook';
+$lang['Preview'] = 'Preview';
+$lang['Background'] = 'Background';
+$lang['Border'] = 'Border';
+$lang['Challenge'] = 'Challenge';
+$lang['Colors'] = 'Colors';
+$lang['Drag & drop options'] = 'Drag & drop options';
+$lang['Drop'] = 'Drop';
+$lang['Drop border'] = 'Drop border';
+$lang['Image'] = 'Image';
+$lang['Image border'] = 'Image border';
+$lang['Image drag & drop'] = 'Image drag & drop';
+$lang['Image size'] = 'Image size';
+$lang['Invalid answer'] = 'Invalid answer';
+$lang['Marks'] = 'Marks';
+$lang['Number of images'] = 'Number of images';
+$lang['Pleaser answer'] = 'Pleaser answer';
+$lang['Random'] = 'Random';
+$lang['Text'] = 'Text';
+$lang['Theme'] = 'Theme';
+$lang['Invalid color code <i>%s</i>'] = 'Invalid color code <i>%s</i>';
+$lang['Tic-tac-toe minigame'] = 'Tic-tac-toe minigame';
+$lang['Tic-tac-toe options'] = 'Tic-tac-toe options';
+$lang['easycaptcha_drag_%s'] = 'To verify you are a human, please place the <b>%s</b> in the most right box bellow.';
+$lang['easycaptcha_tictac'] = 'You are player X, click on the right case to complete the line.';
+$lang['easycaptcha_javascript_public'] = 'You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.';
+$lang['easycaptcha_javascript_admin'] = 'This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.';
+$lang['easycaptcha_cryptocaptcha'] = 'We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.';
+?>
