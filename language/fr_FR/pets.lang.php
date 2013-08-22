@@ -6,6 +6,7 @@ $lang['dog'] = 'chien';
 $lang['duck'] = 'canard';
 $lang['eagle'] = 'aigle';
 $lang['elephant'] = 'éléphant';
+$lang['fish'] = 'poisson';
 $lang['fox'] = 'renard';
 $lang['frog'] = 'grenouille';
 $lang['horse'] = 'cheval';

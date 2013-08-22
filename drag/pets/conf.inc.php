@@ -10,6 +10,7 @@ return array(
   'duck.png' => 'duck',
   'eagle.png' => 'eagle',
   'elephant.png' => 'elephant',
+  'fish.png' => 'fish',
   'fox.png' => 'fox',
   'frog.png' => 'frog',
   'horse.png' => 'horse',
