@@ -94,6 +94,7 @@ function easycaptcha_section_init()
   if (!is_a_guest() || !isset($page['section'])) return;
 
   if (
+    script_basename() == 'index' &&
     $page['section'] == 'categories' && isset($page['category']) &&
     isset($pwg_loaded_plugins['Comments_on_Albums']) &&
     $conf['EasyCaptcha']['activate_on']['category']
