@@ -44,8 +44,8 @@ $('.preview-tictac').eq(0).trigger('change');
 
 // Drag & drop preview
 {/literal}
-var themes = {
-{foreach from=$THEMES item=params key=theme}
+var themes = {ldelim}
+{foreach from=$THEMES key=theme item=params}
   '{$theme}': '{$EASYCAPTCHA_PATH}drag/{$theme}/{$params.image}',
 {/foreach}
 };

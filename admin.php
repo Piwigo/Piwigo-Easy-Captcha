@@ -16,6 +16,8 @@ if ($loaded['cryptocaptcha'])
 
 if (isset($_POST['submit']))
 {
+  if (!isset($_POST['activate_on'])) $_POST['activate_on'] = array();
+
   $conf['EasyCaptcha'] = array(
     'activate_on'     => array(
       'picture'     => in_array('picture', $_POST['activate_on']),

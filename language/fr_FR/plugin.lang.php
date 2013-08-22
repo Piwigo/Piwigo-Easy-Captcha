@@ -31,7 +31,7 @@ $lang['Tic-tac-toe minigame'] = 'Minijeu morpion';
 $lang['Tic-tac-toe options'] = 'Options morpion';
 $lang['easycaptcha_drag_%s'] = 'Pour vérifier que vous êtez un humain, veuillez placer le <b>%s</b> dans le cadre de droite.';
 $lang['easycaptcha_tictac'] = 'Vous êtez le joueur X, cliquez dans la bonne case pour former une ligne complète.';
-$lang['easycaptcha_javascript_public'] = 'Vous devez activer JavaScript pour pouvoir ajouter une commentaire, désolé du dérangement.';
+$lang['easycaptcha_javascript_public'] = 'Vous devez activer JavaScript pour pouvoir ajouter un commentaire, désolé du dérangement.';
 $lang['easycaptcha_javascript_admin'] = 'Ce test requiert que JavaScript soit activé sur le navigateur du visteur. Environ 1% des utilisateurs d\'Internet ont JavaScript désactivé.';
 $lang['easycaptcha_cryptocaptcha'] = 'Nous avons détecté que Crypto Captcha est activé sur votre galerie. Les deux plugins peuvent fonctionner en même temps, mais ous aucun prétexte il ne doivent être activés sur les mêmes pages.';
 ?>
