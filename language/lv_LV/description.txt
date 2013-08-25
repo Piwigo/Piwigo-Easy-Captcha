@@ -1,0 +1,1 @@
+Jauka antibot sistēma komentāriem, reģistrācijai, KontaktFormai un ViesuGrāmatai.

@@ -27,4 +27,7 @@ $lang['Random'] = 'Nejaušs';
 $lang['Theme'] = 'Motīvs';
 $lang['Text'] = 'Teksts';
 $lang['Background'] = 'Fons';
+$lang['Tic-tac-toe options'] = 'Tic-tac-toe opcijas';
+$lang['Tic-tac-toe minigame'] = 'minispēle Tic-tac-toe';
+$lang['You are player X, click on the right case to complete the line.'] = 'Jūs esat X spēlētājs, klikšķiniet uz labā varianta, lai pabeigtu rindu.';
 ?>
