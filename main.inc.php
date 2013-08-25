@@ -2,7 +2,7 @@
 /*
 Plugin Name: Easy Captcha
 Version: auto
-Description: An fun antibot system for comments, registration, ContactForm and GuestBook.
+Description: A fun antibot system for comments, registration, ContactForm and GuestBook.
 Plugin URI: auto
 Author: Mistic
 Author URI: http://www.strangeplanet.fr

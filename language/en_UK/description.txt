@@ -1,1 +1,1 @@
-An fun antibot system for comments, registration, ContactForm and GuestBook.
+A fun antibot system for comments, registration, ContactForm and GuestBook.

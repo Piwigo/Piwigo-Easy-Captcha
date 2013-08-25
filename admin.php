@@ -62,7 +62,7 @@ function list_themes($dir)
 
   while (($item = readdir($dh)) !== false )
   {
-    if ($item!=='.' && $item!=='..' && file_exists($dir.'/'.$item.'/conf.inc.php'))
+    if ($item!=='.' && $item!=='..' && is_dir($dir.'/'.$item) && file_exists($dir.'/'.$item.'/conf.inc.php'))
     {
       $drag_images = include($dir.'/'.$item.'/conf.inc.php');
       $themes[$item] = array(
