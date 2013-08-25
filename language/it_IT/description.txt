@@ -1,0 +1,1 @@
+Un sistema AntiBot divertente per i commenti, la registrazione, il modulo di contatto e il guestbook.
