@@ -2,11 +2,11 @@
 
 {* <!-- DRAG & DROP --> *}
 {if $EASYCAPTCHA_CHALLENGE == 'drag'}
-<p><label>{'easycaptcha_drag_%s'|translate|sprintf:$EASYCAPTCHA_CONF.text}</label></p>
+<p><label>{'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate|sprintf:$EASYCAPTCHA_CONF.text}</label></p>
 
 {* <!-- TIC TAC TOE --> *}
 {else if $EASYCAPTCHA_CHALLENGE == 'tictac'}
-<p><label>{'easycaptcha_tictac'|translate}</label></p>
+<p><label>{'You are player X, click on the right case to complete the line.'|translate}</label></p>
 
 {/if}
 {$smarty.capture.easycaptcha}

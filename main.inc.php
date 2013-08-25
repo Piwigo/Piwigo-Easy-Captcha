@@ -30,8 +30,7 @@ if (defined('IN_ADMIN'))
 }
 else
 {
-  add_event_handler('init', 'easycaptcha_document_init');
-  add_event_handler('loc_end_section_init', 'easycaptcha_section_init', EVENT_HANDLER_PRIORITY_NEUTRAL+30);
+  add_event_handler('loc_end_section_init', 'easycaptcha_document_init', EVENT_HANDLER_PRIORITY_NEUTRAL+30);
 }
 
 
@@ -66,10 +65,10 @@ WHERE id = "'. EASYCAPTCHA_ID .'"';
 }
 
 
-// modules : picture comment & register
+// modules
 function easycaptcha_document_init()
 {
-  global $conf, $user;
+  global $conf, $pwg_loaded_plugins, $page;
 
   if (!is_a_guest()) return;
 
@@ -83,35 +82,28 @@ function easycaptcha_document_init()
     $conf['EasyCaptcha']['template'] = 'comment';
     include(EASYCAPTCHA_PATH . 'include/picture.inc.php');
   }
-
-}
-
-// modules : album comment & contact & guestbook
-function easycaptcha_section_init()
-{
-  global $conf, $pwg_loaded_plugins, $page;
-
-  if (!is_a_guest() || !isset($page['section'])) return;
-
-  if (
-    script_basename() == 'index' &&
-    $page['section'] == 'categories' && isset($page['category']) &&
-    isset($pwg_loaded_plugins['Comments_on_Albums']) &&
-    $conf['EasyCaptcha']['activate_on']['category']
-    )
+  else if (isset($page['section']))
   {
-    $conf['EasyCaptcha']['template'] = 'comment';
-    include(EASYCAPTCHA_PATH . 'include/category.inc.php');
-  }
-  else if ( $page['section'] == 'contact' && $conf['EasyCaptcha']['activate_on']['contactform'] )
-  {
-    $conf['EasyCaptcha']['template'] = 'contactform';
-    include(EASYCAPTCHA_PATH . 'include/contactform.inc.php');
-  }
-  else if ( $page['section'] == 'guestbook' && $conf['EasyCaptcha']['activate_on']['guestbook'] )
-  {
-    $conf['EasyCaptcha']['template'] = 'guestbook';
-    include(EASYCAPTCHA_PATH . 'include/guestbook.inc.php');
+    if (
+      script_basename() == 'index' &&
+      $page['section'] == 'categories' && isset($page['category']) &&
+      isset($pwg_loaded_plugins['Comments_on_Albums']) &&
+      $conf['EasyCaptcha']['activate_on']['category']
+      )
+    {
+      $conf['EasyCaptcha']['template'] = 'comment';
+      include(EASYCAPTCHA_PATH . 'include/category.inc.php');
+    }
+    else if ( $page['section'] == 'contact' && $conf['EasyCaptcha']['activate_on']['contactform'] )
+    {
+      $conf['EasyCaptcha']['template'] = 'contactform';
+      include(EASYCAPTCHA_PATH . 'include/contactform.inc.php');
+    }
+    else if ( $page['section'] == 'guestbook' && $conf['EasyCaptcha']['activate_on']['guestbook'] )
+    {
+      $conf['EasyCaptcha']['template'] = 'guestbook';
+      include(EASYCAPTCHA_PATH . 'include/guestbook.inc.php');
+    }
   }
 }
 

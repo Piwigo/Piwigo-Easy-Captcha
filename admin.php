@@ -11,7 +11,7 @@ $loaded = array(
 
 if ($loaded['cryptocaptcha'])
 {
-  $page['warnings'][] = l10n('easycaptcha_cryptocaptcha');
+  $page['warnings'][] = l10n('We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.');
 }
 
 if (isset($_POST['submit']))

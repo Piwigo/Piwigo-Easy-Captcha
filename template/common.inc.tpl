@@ -70,7 +70,7 @@
 
 {capture name=easycaptcha}
 <noscript id="easycaptcha_noscript">
-  {'easycaptcha_javascript_public'|translate}
+  {'You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'|translate}
 </noscript>
 
 <div id="easycaptcha" style="display:none;">

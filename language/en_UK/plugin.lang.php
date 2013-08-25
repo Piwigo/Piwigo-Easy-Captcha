@@ -29,9 +29,9 @@ $lang['Theme'] = 'Theme';
 $lang['Invalid color code <i>%s</i>'] = 'Invalid color code <i>%s</i>';
 $lang['Tic-tac-toe minigame'] = 'Tic-tac-toe minigame';
 $lang['Tic-tac-toe options'] = 'Tic-tac-toe options';
-$lang['easycaptcha_drag_%s'] = 'To verify you are a human, please place the <b>%s</b> in the most right box bellow.';
-$lang['easycaptcha_tictac'] = 'You are player X, click on the right case to complete the line.';
-$lang['easycaptcha_javascript_public'] = 'You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.';
-$lang['easycaptcha_javascript_admin'] = 'This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.';
-$lang['easycaptcha_cryptocaptcha'] = 'We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.';
+$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'To verify you are a human, please place the <b>%s</b> in the most right box bellow.';
+$lang['You are player X, click on the right case to complete the line.'] = 'You are player X, click on the right case to complete the line.';
+$lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.';
+$lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.';
+$lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.';
 ?>

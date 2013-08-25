@@ -4,7 +4,7 @@
 
   {* <!-- DRAG & DROP --> *}
   {if $EASYCAPTCHA_CHALLENGE == 'drag'}
-  <td class="title">{'easycaptcha_drag_%s'|translate|sprintf:$EASYCAPTCHA_CONF.text}</td>
+  <td class="title">{'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate|sprintf:$EASYCAPTCHA_CONF.text}</td>
 
   {footer_script}
   var captcha_code = new LiveValidation(jQuery('input[name="easycaptcha"]')[0], {ldelim} onlyOnSubmit: true });
@@ -13,7 +13,7 @@
 
   {* <!-- TIC TAC TOE --> *}
   {else if $EASYCAPTCHA_CHALLENGE == 'tictac'}
-  <td class="title">{'easycaptcha_tictac'|translate}</td>
+  <td class="title">{'You are player X, click on the right case to complete the line.'|translate}</td>
 
   {footer_script}
   var captcha_code = new LiveValidation(jQuery('input[name="easycaptcha_key"]')[0], {ldelim} onlyOnSubmit: true });

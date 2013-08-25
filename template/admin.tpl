@@ -182,7 +182,7 @@ $('.preview').prevAll('a').on('click', function() {
     <legend>{'Drag & drop options'|translate}</legend>
 
     <div class="warnings my-warnings">
-      <ul><li>{'easycaptcha_javascript_admin'|translate}</li></ul>
+      <ul><li>{'This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'|translate}</li></ul>
     </div>
 
     <ul>
