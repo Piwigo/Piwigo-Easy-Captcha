@@ -1,0 +1,1 @@
+Um sistema antibot divertido para comentários, registro ContactForm e livro de visitas.
