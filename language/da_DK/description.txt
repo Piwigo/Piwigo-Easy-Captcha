@@ -1,0 +1,1 @@
+Et sjovt antibotsystem til kommentarer, registrering, ContactForm og GuestBook.
