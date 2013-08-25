@@ -1,0 +1,1 @@
+Yorumlar, İletişim Formu ve Ziyaretçi Defteri için eğlenceli bir antibot sistemidir.
