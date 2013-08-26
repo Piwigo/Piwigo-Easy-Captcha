@@ -8,4 +8,9 @@ $lang['Contact form'] = 'Φόρμα επικοινωνίας';
 $lang['Guestbook'] = 'Βιβλίο Επισκεπτών';
 $lang['Picture comments'] = 'Σχόλια εικόνας';
 $lang['Register form'] = 'Φόρμα Εγγραφής';
+$lang['Drag & drop options'] = 'Επιλογές Drag & drop ';
+$lang['Colors'] = 'Χρώματα';
+$lang['Challenge'] = 'Πρόκληση';
+$lang['Border'] = 'Περιθώριο';
+$lang['Background'] = 'Φόντο';
 ?>
