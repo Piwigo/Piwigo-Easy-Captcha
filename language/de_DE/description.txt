@@ -1,0 +1,3 @@
+Ein Antibot/Antispam Plugin für Kommentare, Gästebuch, Registrierung und Kontaktformular.
+Im Gegensatz zu den anderen Captcha Plugins bietet dieses Plugin etwas unterhaltsamere Varianten:
+Ein Tic-Tac-Toe Minispiel und ein Drag & Drop Bilderspiel.
