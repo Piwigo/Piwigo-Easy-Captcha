@@ -13,4 +13,8 @@ $lang['Colors'] = 'Χρώματα';
 $lang['Challenge'] = 'Πρόκληση';
 $lang['Border'] = 'Περιθώριο';
 $lang['Background'] = 'Φόντο';
+$lang['Image border'] = 'Περιθώριο Εικόνας';
+$lang['Image'] = 'Εικόνα';
+$lang['Drop border'] = 'Περιθώριο Πτώσης';
+$lang['Drop'] = 'Πτώση';
 ?>
