@@ -30,4 +30,8 @@ $lang['Background'] = 'Fons';
 $lang['Tic-tac-toe options'] = 'Tic-tac-toe opcijas';
 $lang['Tic-tac-toe minigame'] = 'minispēle Tic-tac-toe';
 $lang['You are player X, click on the right case to complete the line.'] = 'Jūs esat X spēlētājs, klikšķiniet uz labā varianta, lai pabeigtu rindu.';
+$lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Mēs esam konstatējuši, ka jūsu galerijā ir pieejams Crypto Captcha spraudnis. Abus spraudņus var izmantot vienlaicīgi, bet nekādā gadījumā jūs nedrikstat aktivēt abus vienā un tajā pašā lapā.';
+$lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Šīs iespējas nosaka, ka apmeklētāju pārlūkā jābūt iespējotam JavaScript. Apmēram 1% Interneta lietotāju JavaScript nav iespējots.';
+$lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Lai varētu pievienot komentāru, jums pārlūkā jāaktivē JavaScript, atvainojiet par neērtībām. ';
+$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Lai pārbaudītu vai esat cilvēks, ievadiet <b>%s</b> apakšējā labējā lodziņā.';
 ?>
