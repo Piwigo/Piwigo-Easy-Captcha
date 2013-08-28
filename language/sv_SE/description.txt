@@ -1,0 +1,1 @@
+Ett roligt bot-bekämpar-system för kommentarer, registrering, ContactForm och gästbok.
