@@ -1,0 +1,1 @@
+Zabawny mechanizm przeciw botom dla komentarzy, rejestracji, formularza kontaktowego i księgi gości.
