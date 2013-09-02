@@ -1,0 +1,1 @@
+Antibotovský systém pre komentáre, registráciu, kontaktný formulár a knihu návštev.
