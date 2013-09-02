@@ -27,10 +27,9 @@ $lang['Image border'] = '圖像邊界';
 $lang['Image drag & drop'] = '圖像拖放';
 $lang['Image size'] = '圖像尺寸';
 $lang['Invalid answer'] = '答案無效';
-$lang['Invalid color code <i>%s</i>'] = '無效的顏色代碼的<i>％s的</ I>';
+$lang['Invalid color code <i>%s</i>'] = '無效的顏色代碼的 <i>%s</i>';
 $lang['Marks'] = '商標';
-$lang['Number of images'] = '節省
-圖像數';
+$lang['Number of images'] = '圖像數';
 $lang['Random'] = '隨機';
 $lang['Text'] = '文本';
 $lang['Theme'] = '主題';
