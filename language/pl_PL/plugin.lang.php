@@ -25,4 +25,13 @@ $lang['Image size'] = 'Rozmiar obrazu';
 $lang['Invalid answer'] = 'Nieprawidłowa odpowiedź';
 $lang['Text'] = 'Tekst';
 $lang['Theme'] = 'Motyw';
+$lang['Drop border'] = 'Usuń ramkę';
+$lang['Invalid color code <i>%s</i>'] = 'Nieprawidłowy kod koloru <i>%s</i>';
+$lang['Marks'] = 'Znaczniki';
+$lang['Pleaser answer'] = 'Proszę o odpowiedź';
+$lang['Random'] = 'Looswe';
+$lang['Tic-tac-toe minigame'] = 'Minigierka "Kółko i krzyżyk"';
+$lang['Tic-tac-toe options'] = 'Opcje "Kółko i krzyżyk"';
+$lang['You are player X, click on the right case to complete the line.'] = 'Jesteś graczem X, kliknij w odpowiednie pole aby skompletować linię.';
+$lang['Comments action'] = 'Akcje komentarzy';
 ?>
