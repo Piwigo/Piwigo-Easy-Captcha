@@ -28,4 +28,10 @@ $lang['Image size'] = '图片大小';
 $lang['Invalid answer'] = '错误';
 $lang['Invalid color code <i>%s</i>'] = '颜色代码格式错误 <i>%s</i>';
 $lang['Marks'] = '标记';
+$lang['Comments action'] = '评论动作';
+$lang['Drop border'] = '下降边界';
+$lang['Moderate'] = '中度';
+$lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = '这一挑战要求在访问者的浏览器中启用JavaScript 。 约1 ％的互联网用户已禁用JavaScript。';
+$lang['Tic-tac-toe minigame'] = '井字小游戏';
+$lang['Tic-tac-toe options'] = '井字游戏选项';
 ?>
