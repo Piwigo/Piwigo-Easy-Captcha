@@ -8,4 +8,10 @@ $lang['Contact form'] = 'Kontaktní formulář';
 $lang['Guestbook'] = 'Knihu návštěv';
 $lang['Picture comments'] = 'Komentáře k obrázkům';
 $lang['Register form'] = 'Registrační formulář';
+$lang['Background'] = 'pozadí';
+$lang['Border'] = 'okraj';
+$lang['Colors'] = 'barvy';
+$lang['Image'] = 'obrázek';
+$lang['Image border'] = 'okraj obrázku';
+$lang['Image size'] = 'velikost obrázku';
 ?>
