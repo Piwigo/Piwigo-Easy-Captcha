@@ -1,0 +1,1 @@
+Un divertit sistema anti-bots per als comentaris, formulari de registre, formulari de contacte i llibre de visites.
