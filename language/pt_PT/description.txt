@@ -1,0 +1,1 @@
+Um sistema divertido antibot  para usar nos comentários, registo, Formulário de contacto e livro de visitas.
