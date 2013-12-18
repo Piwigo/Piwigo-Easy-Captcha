@@ -34,4 +34,5 @@ $lang['Image size'] = 'İmaj büyüklüğü';
 $lang['Challenge'] = 'Sınama';
 $lang['Background'] = 'Arkaplan';
 $lang['Drag & drop options'] = 'Sürükle ve bırak seçenekleri';
+$lang['Nowhere'] = 'Hiçbir yere';
 ?>
