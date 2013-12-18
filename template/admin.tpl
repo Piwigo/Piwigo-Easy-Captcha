@@ -1,23 +1,24 @@
-{combine_css path=$EASYCAPTCHA_PATH|@cat:"template/style.css"}
+{combine_css path=$EASYCAPTCHA_PATH|cat:'template/style.css'}
 
-{combine_css path="themes/default/js/plugins/chosen.css"}
+{combine_css path='themes/default/js/plugins/chosen.css'}
 {combine_script id='jquery.chosen' load='footer' path='themes/default/js/plugins/chosen.jquery.min.js'}
 
 {combine_css path=$EASYCAPTCHA_PATH|cat:'template/bgrins-spectrum/spectrum.css'}
 {combine_script id='jquery.spectrum' load='footer' path=$EASYCAPTCHA_PATH|cat:'template/bgrins-spectrum/spectrum.js'}
 
 {assign var="spectrum_language" value=$EASYCAPTCHA_PATH|cat:'template/bgrins-spectrum/i18n/jquery.spectrum-'|cat:$lang_info.code|cat:'.js'}
-{if 'PHPWG_ROOT_PATH'|@constant|@cat:$spectrum_language|file_exists}
+{if 'PHPWG_ROOT_PATH'|constant|cat:$spectrum_language|file_exists}
 {combine_script id='jquery.spectrum.'|cat:$lang_info.code load='footer' require='jquery.spectrum' path=$spectrum_language}
 {/if}
 
 
-{footer_script}{literal}
+{footer_script}
 // multiselect
 $("select").css({
-    "width":"700px"
+    width: 300
 }).chosen({
     disable_search:true,
+    placeholder_text_multiple: '{'Nowhere'|translate}'
 });
 
 // Spectrum settings
@@ -32,7 +33,7 @@ $.extend($.fn.spectrum.defaults, {
 // Tic-tac-toe preview
 $('.preview-tictac').on('change', function() {
     var inputs = ['size','bg1','bg2','bd','obj','sel'],
-        url = '{/literal}{$EASYCAPTCHA_PATH}{literal}' + 'tictac/gen_admin.php?t='+ new Date().getTime();
+        url = '{$EASYCAPTCHA_PATH}' + 'tictac/gen_admin.php?t='+ new Date().getTime();
 
     for (var i=0; i<inputs.length; i++) {
         url+= '&'+ inputs[i] +'='+ encodeURIComponent($('input[name="tictac['+ inputs[i] +']"]').val());
@@ -43,13 +44,11 @@ $('.preview-tictac').on('change', function() {
 $('.preview-tictac').eq(0).trigger('change');
 
 // Drag & drop preview
-{/literal}
-var themes = {ldelim}
+var themes = {
 {foreach from=$THEMES key=theme item=params}
   '{$theme}': '{$EASYCAPTCHA_PATH}drag/{$theme}/{$params.image}',
 {/foreach}
 };
-{literal}
 
 $('.preview-drag').on('change', function() {
     // style
@@ -58,7 +57,7 @@ $('.preview-drag').on('change', function() {
         search, replace;
 
     for (var i=0; i<inputs.length; i++) {
-        search = '{\\$EASYCAPTCHA_CONF\\.'+ inputs[i] +'}';
+        search = '{ldelim}\\$EASYCAPTCHA.drag\\.'+ inputs[i] +'}';
         replace = $('input[name="drag['+ inputs[i] +']"]').val();
         style = style.replace(new RegExp(search, 'g'), replace);
     }
@@ -66,9 +65,9 @@ $('.preview-drag').on('change', function() {
     var x = parseInt($('input[name="drag[size]"]').val()),
         y = parseInt($('input[name="drag[nb]"]').val());
 
-    search = '{dat_equation}',
+    search = '{ldelim}math equation=\'15+(x+5)*y\' x=$EASYCAPTCHA.drag.size y=$EASYCAPTCHA.drag.nb}',
     replace = 15+(x+5)*y;
-    style = style.replace(new RegExp(search, 'g'), replace);
+    style = style.replace(search, replace);
 
     $('#drag_style').text(style);
 
@@ -106,7 +105,7 @@ $('.preview').prevAll('a').on('click', function() {
     $(this).hide();
     $(this).nextAll('.preview').slideDown();
 });
-{/literal}{/footer_script}
+{/footer_script}
 
 
 <div class="titrePage">
@@ -232,7 +231,8 @@ $('.preview').prevAll('a').on('click', function() {
         <b>&nbsp;</b>
         <a class="buttonLike">{'Preview'|translate}</a>
         <div class="preview">
-          {include file=$EASYCAPTCHA_ABS_PATH|cat:'template/common.inc.tpl' EASYCAPTCHA_CHALLENGE='drag' EASYCAPTCHA_CONF=$easycaptcha.drag}
+          {$easycaptcha.challenge = 'drag'}
+          {include file=$EASYCAPTCHA_ABS_PATH|cat:'template/common.inc.tpl' EASYCAPTCHA=$easycaptcha}
           {$smarty.capture.easycaptcha}
         </div>
       </li>
@@ -250,54 +250,15 @@ $('.preview').prevAll('a').on('click', function() {
     [<a href="https://www.iconfinder.com/iconsets/UrbanStories-png-Artdesigner-lv" class="externalLink">#3</a>]
     [<a href="https://www.iconfinder.com/iconsets/ie_Bright" class="externalLink">#4</a>]
   | Libraries
-    [<a href="http://bgrins.github.io/spectrum"class="externalLink">Spectrum.js</a>]
-    [<a href="http://threedubmedia.com"class="externalLink">jQuery.events</a>]
+    [<a href="http://bgrins.github.io/spectrum" class="externalLink">Spectrum.js</a>]
+    [<a href="http://threedubmedia.com" class="externalLink">jQuery.events</a>]
 </div>
 
 
 {* <!-- weird thing to update bunch of CSS --> *}
-{html_head}{literal}
+{html_head}
 <style id="drag_style"></style>
 <script type="text/template" id="drag_style_src">
-#easycaptcha, #easycaptcha_noscript {
-  background: {$EASYCAPTCHA_CONF.bg1};
-  background: -webkit-linear-gradient(top, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: -moz-linear-gradient(top, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: -ms-linear-gradient(top, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: -o-linear-gradient(top, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: linear-gradient(to bottom, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  color:{$EASYCAPTCHA_CONF.txt};
-}
-#easycaptcha .drag_item {
-  width:{$EASYCAPTCHA_CONF.size}px;
-  height:{$EASYCAPTCHA_CONF.size}px;
-  border:1px solid {$EASYCAPTCHA_CONF.bd1};
-  background:{$EASYCAPTCHA_CONF.obj};
-}
-#easycaptcha .drag_item img {
-  width:{$EASYCAPTCHA_CONF.size}px;
-  height:{$EASYCAPTCHA_CONF.size}px;
-}
-#easycaptcha .drop_zone {
-  width:{$EASYCAPTCHA_CONF.size}px;
-  height:{$EASYCAPTCHA_CONF.size}px;
-  margin-left:{dat_equation}px;
-  line-height:{$EASYCAPTCHA_CONF.size}px;
-  background: {$EASYCAPTCHA_CONF.bg1};
-  background: -webkit-linear-gradient(bottom, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: -moz-linear-gradient(bottom, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: -ms-linear-gradient(bottom, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: -o-linear-gradient(bottom, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  background: linear-gradient(to top, {$EASYCAPTCHA_CONF.bg1} 0%, {$EASYCAPTCHA_CONF.bg2} 100%);
-  border:1px dotted {$EASYCAPTCHA_CONF.bd2};
-  color:{$EASYCAPTCHA_CONF.txt};
-}
-#easycaptcha .drop_zone.active {
-  background:{$EASYCAPTCHA_CONF.sel};
-}
-#easycaptcha .drop_zone.valid {
-  background:{$EASYCAPTCHA_CONF.sel};
-  box-shadow:0 0 0 2px {$EASYCAPTCHA_CONF.sel};
-}
+{$DRAG_CSS}
 </script>
-{/literal}{/html_head}
+{/html_head}

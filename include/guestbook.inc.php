@@ -14,7 +14,7 @@ function add_easycaptcha()
 function prefilter_easycaptcha($content, $smarty)
 {
   $search = '#{\$comment_add\.CONTENT}</textarea>(\s*)</td>(\s*)</tr>#';
-  $replace = '{\$comment_add.CONTENT}</textarea>$1</td>$2</tr>'."\n".'{\$EASYCAPTCHA}';
+  $replace = '{\$comment_add.CONTENT}</textarea>$1</td>$2</tr>'."\n".'{\$EASYCAPTCHA_CONTENT}';
   return preg_replace($search, $replace, $content);
 }
 

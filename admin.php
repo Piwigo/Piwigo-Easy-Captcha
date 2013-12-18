@@ -19,7 +19,7 @@ if (isset($_POST['submit']))
   if (!isset($_POST['activate_on'])) $_POST['activate_on'] = array();
 
   $conf['EasyCaptcha'] = array(
-    'activate_on'     => array(
+    'activate_on' => array(
       'picture'     => in_array('picture', $_POST['activate_on']),
       'category'    => in_array('category', $_POST['activate_on']) || !$loaded['category'],
       'register'    => in_array('register', $_POST['activate_on']),
@@ -48,10 +48,11 @@ if (isset($_POST['submit']))
       'obj'   => check_color($_POST['tictac']['obj']),
       'sel'   => check_color($_POST['tictac']['sel']),
       ),
+    'lastmod' => time(),
     );
 
   conf_update_param('EasyCaptcha', serialize($conf['EasyCaptcha']));
-  array_push($page['infos'], l10n('Information data registered in database'));
+  $page['infos'][] = l10n('Information data registered in database');
 }
 
 function list_themes($dir)
@@ -62,7 +63,9 @@ function list_themes($dir)
 
   while (($item = readdir($dh)) !== false )
   {
-    if ($item!=='.' && $item!=='..' && is_dir($dir.'/'.$item) && file_exists($dir.'/'.$item.'/conf.inc.php'))
+    if ($item!=='.' && $item!=='..' &&
+        is_dir($dir.'/'.$item) && file_exists($dir.'/'.$item.'/conf.inc.php')
+      )
     {
       $drag_images = include($dir.'/'.$item.'/conf.inc.php');
       $themes[$item] = array(
@@ -79,12 +82,13 @@ function list_themes($dir)
 $template->assign(array(
   'easycaptcha' => $conf['EasyCaptcha'],
   'loaded' => $loaded,
-  'THEMES' => list_themes(EASYCAPTCHA_PATH.'drag'),
+  'THEMES' => list_themes(EASYCAPTCHA_PATH . 'drag'),
   'EASYCAPTCHA_PATH' => EASYCAPTCHA_PATH,
-  'EASYCAPTCHA_ABS_PATH' => realpath(EASYCAPTCHA_PATH).'/',
+  'EASYCAPTCHA_ABS_PATH' => realpath(EASYCAPTCHA_PATH) . '/',
+  'DRAG_CSS' => file_get_contents(EASYCAPTCHA_PATH . 'template/drag.css'),
   ));
 
-$template->set_filename('plugin_admin_content', realpath(EASYCAPTCHA_PATH.'template/admin.tpl'));
+$template->set_filename('plugin_admin_content', realpath(EASYCAPTCHA_PATH . 'template/admin.tpl'));
 $template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');
 
 
@@ -100,7 +104,7 @@ function check_color($hex)
   }
   else if (strlen($hex) != 6)
   {
-    $page['errors'][] = sprintf(l10n('Invalid color code <i>%s</i>'), '#'.$hex);
+    $page['errors'][] = l10n('Invalid color code <i>%s</i>', '#'.$hex);
     $hex = '000000';
   }
 

@@ -39,8 +39,9 @@
 
 .my-warnings {
   background-image:none;
+  display:inline-block;
   min-height:0;
-  padding:0 0 0 5px;
+  padding:5px 5px 0 5px;
   margin:0 5px 15px 5px;
   font-weight:normal;
   font-size:0.9em;

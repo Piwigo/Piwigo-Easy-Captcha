@@ -3,8 +3,8 @@
   {include file=$EASYCAPTCHA_ABS_PATH|cat:'template/common.inc.tpl'}
 
   {* <!-- DRAG & DROP --> *}
-  {if $EASYCAPTCHA_CHALLENGE == 'drag'}
-  <td class="title">{'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate|sprintf:$EASYCAPTCHA_CONF.text}</td>
+  {if $EASYCAPTCHA.challenge == 'drag'}
+  <td class="title">{'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate:$EASYCAPTCHA.drag.text}</td>
 
   {footer_script}
   var captcha_code = new LiveValidation(jQuery('input[name="easycaptcha"]')[0], {ldelim} onlyOnSubmit: true });
@@ -12,7 +12,7 @@
   {/footer_script}
 
   {* <!-- TIC TAC TOE --> *}
-  {else if $EASYCAPTCHA_CHALLENGE == 'tictac'}
+  {else if $EASYCAPTCHA..challenge == 'tictac'}
   <td class="title">{'You are player X, click on the right case to complete the line.'|translate}</td>
 
   {footer_script}

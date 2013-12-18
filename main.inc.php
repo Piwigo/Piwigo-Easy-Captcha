@@ -10,15 +10,15 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-// TODO : test on mobile
+// TODO : captcha on mobile
 if (mobile_theme())
 {
   return;
 }
 
-defined('EASYCAPTCHA_ID') or define('EASYCAPTCHA_ID', basename(dirname(__FILE__)));
-define('EASYCAPTCHA_PATH' , PHPWG_PLUGINS_PATH . EASYCAPTCHA_ID . '/');
-define('EASYCAPTCHA_ADMIN', get_root_url() . 'admin.php?page=plugin-' . EASYCAPTCHA_ID);
+define('EASYCAPTCHA_ID',      basename(dirname(__FILE__)));
+define('EASYCAPTCHA_PATH' ,   PHPWG_PLUGINS_PATH . EASYCAPTCHA_ID . '/');
+define('EASYCAPTCHA_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . EASYCAPTCHA_ID);
 define('EASYCAPTCHA_VERSION', 'auto');
 
 
@@ -39,26 +39,9 @@ function easycaptcha_init()
 {
   global $conf, $pwg_loaded_plugins;
 
-  if (
-    EASYCAPTCHA_VERSION == 'auto' or
-    $pwg_loaded_plugins[EASYCAPTCHA_ID]['version'] == 'auto' or
-    version_compare($pwg_loaded_plugins[EASYCAPTCHA_ID]['version'], EASYCAPTCHA_VERSION, '<')
-  )
-  {
-    include_once(EASYCAPTCHA_PATH . 'include/install.inc.php');
-    easycaptcha_install();
-
-    if ( $pwg_loaded_plugins[EASYCAPTCHA_ID]['version'] != 'auto' && EASYCAPTCHA_VERSION != 'auto' )
-    {
-      $query = '
-UPDATE '. PLUGINS_TABLE .'
-SET version = "'. EASYCAPTCHA_VERSION .'"
-WHERE id = "'. EASYCAPTCHA_ID .'"';
-      pwg_query($query);
-
-      $pwg_loaded_plugins[EASYCAPTCHA_ID]['version'] = EASYCAPTCHA_VERSION;
-    }
-  }
+  include_once(EASYCAPTCHA_PATH . 'maintain.inc.php');
+  $maintain = new EasyCaptcha_maintain(EASYCAPTCHA_ID);
+  $maintain->autoUpdate(EASYCAPTCHA_VERSION, 'install');
 
   load_language('plugin.lang', EASYCAPTCHA_PATH);
   $conf['EasyCaptcha'] = unserialize($conf['EasyCaptcha']);
@@ -70,14 +53,17 @@ function easycaptcha_document_init()
 {
   global $conf, $pwg_loaded_plugins, $page;
 
-  if (!is_a_guest()) return;
+  if (!is_a_guest())
+  {
+    return;
+  }
 
-  if ( script_basename() == 'register' && $conf['EasyCaptcha']['activate_on']['register'] )
+  if (script_basename() == 'register' && $conf['EasyCaptcha']['activate_on']['register'])
   {
     $conf['EasyCaptcha']['template'] = 'register';
     include(EASYCAPTCHA_PATH . 'include/register.inc.php');
   }
-  else if ( script_basename() == 'picture' && $conf['EasyCaptcha']['activate_on']['picture'] )
+  else if (script_basename() == 'picture' && $conf['EasyCaptcha']['activate_on']['picture'])
   {
     $conf['EasyCaptcha']['template'] = 'comment';
     include(EASYCAPTCHA_PATH . 'include/picture.inc.php');
@@ -94,12 +80,12 @@ function easycaptcha_document_init()
       $conf['EasyCaptcha']['template'] = 'comment';
       include(EASYCAPTCHA_PATH . 'include/category.inc.php');
     }
-    else if ( $page['section'] == 'contact' && $conf['EasyCaptcha']['activate_on']['contactform'] )
+    else if ($page['section'] == 'contact' && $conf['EasyCaptcha']['activate_on']['contactform'])
     {
       $conf['EasyCaptcha']['template'] = 'contactform';
       include(EASYCAPTCHA_PATH . 'include/contactform.inc.php');
     }
-    else if ( $page['section'] == 'guestbook' && $conf['EasyCaptcha']['activate_on']['guestbook'] )
+    else if ($page['section'] == 'guestbook' && $conf['EasyCaptcha']['activate_on']['guestbook'])
     {
       $conf['EasyCaptcha']['template'] = 'guestbook';
       include(EASYCAPTCHA_PATH . 'include/guestbook.inc.php');
@@ -111,9 +97,9 @@ function easycaptcha_document_init()
 // admin
 function easycaptcha_plugin_admin_menu($menu)
 {
-  array_push($menu, array(
+  $menu[] = array(
     'NAME' => 'Easy Captcha',
     'URL' => EASYCAPTCHA_ADMIN,
-    ));
+    );
   return $menu;
 }

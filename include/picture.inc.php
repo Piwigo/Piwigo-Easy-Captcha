@@ -14,7 +14,7 @@ function add_easycaptcha()
 function prefilter_easycaptcha($content, $smarty)
 {
   $search = '{$comment_add.CONTENT}</textarea></p>';
-  return str_replace($search, $search."\n{\$EASYCAPTCHA}", $content);
+  return str_replace($search, $search."\n{\$EASYCAPTCHA_CONTENT}", $content);
 }
 
 function check_easycaptcha($action, $comment)

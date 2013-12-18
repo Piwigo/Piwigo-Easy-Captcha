@@ -14,7 +14,7 @@ function add_easycaptcha()
 function prefilter_easycaptcha($content, $smarty)
 {
   $search = '<input type="checkbox" name="send_password_by_mail" id="send_password_by_mail" value="1" checked="checked">';
-  return str_replace($search, $search."\n{\$EASYCAPTCHA}", $content);
+  return str_replace($search, $search."\n{\$EASYCAPTCHA_CONTENT}", $content);
 }
 
 function check_easycaptcha($errors)

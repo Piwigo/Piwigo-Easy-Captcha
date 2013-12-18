@@ -38,12 +38,12 @@ $easycaptcha.find('.drag_item')
           left: Math.bounds(dd.limit.left, dd.offsetX - $easycaptcha.offset().left, dd.limit.right)
       });
   })
-  .drag('end', function(e, dd) {
+  .drag('end', function() {
       $(this).removeClass('active');
   });
 
 $easycaptcha.find('.drop_zone')
-  .drop('start', function(e, dd) {
+  .drop('start', function() {
       $(this).addClass('active');
   })
   .drop(function(e, dd) {

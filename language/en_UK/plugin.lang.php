@@ -34,4 +34,5 @@ $lang['You are player X, click on the right case to complete the line.'] = 'You 
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.';
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'This challenge requires that JavaScript is enabled in the visitor\'s browser. About 1% of Internet users have JavaScript disabled.';
 $lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'We detected that Crypto Captcha plugin is available in your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.';
+$lang['Nowhere'] = 'Nowhere';
 ?>
