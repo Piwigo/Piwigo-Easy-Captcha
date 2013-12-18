@@ -34,4 +34,5 @@ $lang['Pleaser answer'] = 'Responda por favor';
 $lang['Random'] = 'Acaso';
 $lang['Text'] = 'Texto';
 $lang['Theme'] = 'Tema';
+$lang['Nowhere'] = 'Em parte alguma';
 ?>
