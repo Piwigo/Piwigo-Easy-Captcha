@@ -2,7 +2,7 @@
 $lang['Activate on'] = 'Activeren';
 $lang['Album comments'] = 'Albumcommentaar';
 $lang['Guestbook'] = 'Gastenboek';
-$lang['Contact form'] = 'Contact formulier';
+$lang['Contact form'] = 'Contactformulier';
 $lang['Moderate'] = 'Matig';
 $lang['Comments action'] = 'Commentaar actie';
 $lang['Register form'] = 'Registratieformulier';
@@ -28,10 +28,11 @@ $lang['Pleaser answer'] = 'Antwoord aub';
 $lang['Random'] = 'Willekeurig';
 $lang['Text'] = 'Tekst';
 $lang['Theme'] = 'Thema';
-$lang['Tic-tac-toe minigame'] = 'Boter-Kaas-en-eieren minispel';
+$lang['Tic-tac-toe minigame'] = 'Boter-kaas-en-eieren minispel';
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Deze uitdaging vereist dat JavaScript is ingeschakeld in de browser van de bezoeker. Ongeveer 1% van de internetgebruikers heeft JavaScript uitgeschakeld.';
-$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Om te controleren dat u eens mens bent, plaats de <b>%s</b> in het meest rechtse vakje.';
+$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Om te controleren dat u een mens bent, plaats de <b>%s</b> in het meest rechtse vakje.';
 $lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Geconstateerd wordt dat u ook Crypto Captcha gebruikt. Beide plugins kunnen tegelijkertijd gebruikt worden, maar kunnen beter niet op dezelfde pagina tegelijkertijd gebruikt worden.';
 $lang['You are player X, click on the right case to complete the line.'] = 'U bent speler X, klik in het spel op die plek van de regel waarmee u de regel compleet maakt.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'U dient JavaScript in uw browser in te schakelen om commentaar te kunnen toevoegen. Sorry voor het ongemak.';
+$lang['Nowhere'] = 'Nergens';
 ?>
