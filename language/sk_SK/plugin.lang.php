@@ -34,4 +34,5 @@ $lang['Image drag & drop'] = 'Fotka drag & drop';
 $lang['Image size'] = 'Veľkosť fotky';
 $lang['Invalid answer'] = 'Nesprávna odpoveď';
 $lang['Invalid color code <i>%s</i>'] = 'Nesprávny kód farby <i>%s</i>';
+$lang['Nowhere'] = 'Nikde';
 ?>
