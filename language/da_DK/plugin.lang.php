@@ -34,4 +34,5 @@ $lang['Random'] = 'Tilfældig';
 $lang['Text'] = 'Tekst';
 $lang['Theme'] = 'Tema';
 $lang['Tic-tac-toe minigame'] = 'Kryds og bolle-minispil';
+$lang['Nowhere'] = 'Intetsteds';
 ?>
