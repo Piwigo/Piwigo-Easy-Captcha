@@ -34,4 +34,5 @@ $lang['We detected that Crypto Captcha plugin is available on your gallery. Both
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Šīs iespējas nosaka, ka apmeklētāju pārlūkā jābūt iespējotam JavaScript. Apmēram 1% Interneta lietotāju JavaScript nav iespējots.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Lai varētu pievienot komentāru, jums pārlūkā jāaktivē JavaScript, atvainojiet par neērtībām. ';
 $lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Lai pārbaudītu vai esat cilvēks, ievadiet <b>%s</b> apakšējā labējā lodziņā.';
+$lang['Nowhere'] = 'nekur';
 ?>
