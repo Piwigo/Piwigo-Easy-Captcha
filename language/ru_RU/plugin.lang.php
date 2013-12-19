@@ -34,4 +34,5 @@ $lang['Tic-tac-toe minigame'] = 'Крестики-нолики';
 $lang['Drop border'] = 'Граница цели';
 $lang['Image drag & drop'] = '"Схвати и перенеси"';
 $lang['Drop'] = 'Цель';
+$lang['Nowhere'] = 'Нигде';
 ?>
