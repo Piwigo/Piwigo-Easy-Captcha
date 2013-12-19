@@ -34,4 +34,5 @@ $lang['Random'] = 'Aleatória';
 $lang['Text'] = 'Texto';
 $lang['Theme'] = 'Tema';
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Este desafio exige que o JavaScript esteja ativado no navegador do visitante. Cerca de 1% dos usuários da Internet tem o JavaScript desativado.';
+$lang['Nowhere'] = 'Lugar nenhum';
 ?>
