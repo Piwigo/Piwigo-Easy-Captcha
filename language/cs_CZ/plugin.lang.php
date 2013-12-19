@@ -34,4 +34,5 @@ $lang['To verify you are a human, please place the <b>%s</b> in the most right b
 $lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Zjistili jsme, že používáte také Crypto Captcha plugin. Oba pluginy mohou být používány současně, ale nesmějí být za žádných okolností aktivovány na stejné stránce.';
 $lang['You are player X, click on the right case to complete the line.'] = 'Máte křížky, dokončete řádek.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Omlouváme se, ale pro přidání komentáře potřebujete zapnutý JavaScript.';
+$lang['Nowhere'] = 'Nikde';
 ?>
