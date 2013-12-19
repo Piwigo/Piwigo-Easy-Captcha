@@ -34,4 +34,5 @@ $lang['Image size'] = 'Dimmensione imagine';
 $lang['Image drag & drop'] = 'Drag & drop immagine';
 $lang['Image'] = 'Immagine';
 $lang['Image border'] = 'Bordo immagine';
+$lang['Nowhere'] = 'Da nessuna parte';
 ?>
