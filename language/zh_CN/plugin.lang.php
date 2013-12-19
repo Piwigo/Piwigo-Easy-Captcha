@@ -34,4 +34,5 @@ $lang['Moderate'] = '中度';
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = '这一挑战要求在访问者的浏览器中启用JavaScript 。 约1 ％的互联网用户已禁用JavaScript。';
 $lang['Tic-tac-toe minigame'] = '井字小游戏';
 $lang['Tic-tac-toe options'] = '井字游戏选项';
+$lang['Nowhere'] = '无处';
 ?>
