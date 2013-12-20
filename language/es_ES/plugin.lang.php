@@ -34,4 +34,5 @@ $lang['Random'] = 'Aleatorio';
 $lang['Text'] = 'Texto';
 $lang['Theme'] = 'Tema';
 $lang['Tic-tac-toe minigame'] = 'Mini juego "Tic-tac-toe"';
+$lang['Nowhere'] = 'En ninguna parte';
 ?>
