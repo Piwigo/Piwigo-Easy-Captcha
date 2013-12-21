@@ -33,7 +33,7 @@ $.extend($.fn.spectrum.defaults, {
 // Tic-tac-toe preview
 $('.preview-tictac').on('change', function() {
     var inputs = ['size','bg1','bg2','bd','obj','sel'],
-        url = '{$EASYCAPTCHA_PATH}' + 'tictac/gen_admin.php?t='+ new Date().getTime();
+        url = '{$EASYCAPTCHA_PATH}tictac/gen_admin.php?t='+ new Date().getTime();
 
     for (var i=0; i<inputs.length; i++) {
         url+= '&'+ inputs[i] +'='+ encodeURIComponent($('input[name="tictac['+ inputs[i] +']"]').val());

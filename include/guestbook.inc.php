@@ -3,12 +3,12 @@ defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
 
 include(EASYCAPTCHA_PATH.'include/common.inc.php');
 add_event_handler('loc_begin_index', 'add_easycaptcha');
-add_event_handler('user_comment_check_guestbook', 'check_easycaptcha', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
+add_event_handler('user_comment_check', 'check_easycaptcha', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
 
 function add_easycaptcha()
 {
   global $template;
-  $template->set_prefilter('index', 'prefilter_easycaptcha');
+  $template->set_prefilter('guestbook', 'prefilter_easycaptcha');
 }
 
 function prefilter_easycaptcha($content, $smarty)

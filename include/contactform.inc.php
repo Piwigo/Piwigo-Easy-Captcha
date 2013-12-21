@@ -8,7 +8,7 @@ add_event_handler('contact_form_check', 'check_easycaptcha', EVENT_HANDLER_PRIOR
 function add_easycaptcha()
 {
   global $template;
-  $template->set_prefilter('index', 'prefilter_easycaptcha');
+  $template->set_prefilter('contactform', 'prefilter_easycaptcha');
 }
 
 function prefilter_easycaptcha($content, $smarty)
