@@ -26,8 +26,8 @@ if ($conf['EasyCaptcha']['challenge'] == 'drag')
   }
 
   $conf['EasyCaptcha']['drag']['selected'] = array_rand($conf['EasyCaptcha']['drag']['selection']);
-  $conf['EasyCaptcha']['drag']['text']     = l10n($drag_images[ $conf['EasyCaptcha']['drag']['selected'] ]);
-  $conf['EasyCaptcha']['key']      = $conf['EasyCaptcha']['challenge'] .'-'. pwg_password_hash($conf['secret_key'] . $conf['EasyCaptcha']['drag']['selected']);
+  $conf['EasyCaptcha']['drag']['text'] = l10n($drag_images[ $conf['EasyCaptcha']['drag']['selected'] ]);
+  $conf['EasyCaptcha']['key'] = $conf['EasyCaptcha']['challenge'] .'-'. pwg_password_hash($conf['secret_key'] . $conf['EasyCaptcha']['drag']['selected']);
 }
 // Tic-tac-toe
 else if ($conf['EasyCaptcha']['challenge'] == 'tictac')
@@ -48,7 +48,7 @@ $template->assign(array(
   ));
 
 $template->set_filename('EasyCaptcha', realpath(EASYCAPTCHA_PATH.'template/'.$conf['EasyCaptcha']['template'].'.tpl'));
-$template->assign_var_from_handle('EASYCAPTCHA_CONTENT', 'EasyCaptcha');
+$template->append('EASYCAPTCHA', array('parsed_content' => $template->parse('EasyCaptcha', true)), true);
 
 
 function easycaptcha_check()

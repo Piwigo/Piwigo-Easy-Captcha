@@ -1,7 +1,9 @@
 <?php
 defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
 
+$conf['EasyCaptcha']['template'] = 'comment';
 include(EASYCAPTCHA_PATH.'include/common.inc.php');
+
 add_event_handler('loc_begin_index', 'add_easycaptcha');
 add_event_handler('user_comment_check_albums', 'check_easycaptcha', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
 
@@ -14,7 +16,7 @@ function add_easycaptcha()
 function prefilter_easycaptcha($content, $smarty)
 {
   $search = '{$comment_add.CONTENT}</textarea></p>';
-  return str_replace($search, $search."\n{\$EASYCAPTCHA_CONTENT}", $content);
+  return str_replace($search, $search."\n{\$EASYCAPTCHA.parsed_content}", $content);
 }
 
 function check_easycaptcha($action, $comment)

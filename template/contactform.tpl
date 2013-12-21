@@ -1,10 +1,13 @@
-</tr>
 <tr>
   {include file=$EASYCAPTCHA_ABS_PATH|cat:'template/common.inc.tpl'}
 
   {* <!-- DRAG & DROP --> *}
   {if $EASYCAPTCHA.challenge == 'drag'}
-  <td class="title">{'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate:$EASYCAPTCHA.drag.text}</td>
+  <td class="title"></td>
+  <td>
+    {'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate:$EASYCAPTCHA.drag.text}
+    {$smarty.capture.easycaptcha}
+  </td>
 
   {footer_script}
   var captcha_code = new LiveValidation(jQuery('input[name="easycaptcha"]')[0], {ldelim} onlyOnSubmit: true });
@@ -12,8 +15,12 @@
   {/footer_script}
 
   {* <!-- TIC TAC TOE --> *}
-  {else if $EASYCAPTCHA..challenge == 'tictac'}
-  <td class="title">{'You are player X, click on the right case to complete the line.'|translate}</td>
+  {else if $EASYCAPTCHA.challenge == 'tictac'}
+  <td class="title"></td>
+  <td>
+    {'You are player X, click on the right case to complete the line.'|translate}
+    {$smarty.capture.easycaptcha}
+  </td>
 
   {footer_script}
   var captcha_code = new LiveValidation(jQuery('input[name="easycaptcha_key"]')[0], {ldelim} onlyOnSubmit: true });
@@ -26,6 +33,4 @@
   {/footer_script}
 
   {/if}
-  <td>
-    {$smarty.capture.easycaptcha}
-  </td>
+</tr>

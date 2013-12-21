@@ -1,22 +1,10 @@
 <?php
 defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
 
+$conf['EasyCaptcha']['template'] = 'guestbook';
 include(EASYCAPTCHA_PATH.'include/common.inc.php');
-add_event_handler('loc_begin_index', 'add_easycaptcha');
+
 add_event_handler('user_comment_check', 'check_easycaptcha', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
-
-function add_easycaptcha()
-{
-  global $template;
-  $template->set_prefilter('guestbook', 'prefilter_easycaptcha');
-}
-
-function prefilter_easycaptcha($content, $smarty)
-{
-  $search = '#{\$comment_add\.CONTENT}</textarea>(\s*)</td>(\s*)</tr>#';
-  $replace = '{\$comment_add.CONTENT}</textarea>$1</td>$2</tr>'."\n".'{\$EASYCAPTCHA_CONTENT}';
-  return preg_replace($search, $replace, $content);
-}
 
 function check_easycaptcha($action, $comment)
 {

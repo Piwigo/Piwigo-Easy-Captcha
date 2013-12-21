@@ -31,6 +31,7 @@ if (defined('IN_ADMIN'))
 else
 {
   add_event_handler('loc_end_section_init', 'easycaptcha_document_init', EVENT_HANDLER_PRIORITY_NEUTRAL+30);
+  add_event_handler('loc_begin_register', 'easycaptcha_register_init', EVENT_HANDLER_PRIORITY_NEUTRAL+30);
 }
 
 
@@ -58,14 +59,8 @@ function easycaptcha_document_init()
     return;
   }
 
-  if (script_basename() == 'register' && $conf['EasyCaptcha']['activate_on']['register'])
+  if (script_basename() == 'picture' && $conf['EasyCaptcha']['activate_on']['picture'])
   {
-    $conf['EasyCaptcha']['template'] = 'register';
-    include(EASYCAPTCHA_PATH . 'include/register.inc.php');
-  }
-  else if (script_basename() == 'picture' && $conf['EasyCaptcha']['activate_on']['picture'])
-  {
-    $conf['EasyCaptcha']['template'] = 'comment';
     include(EASYCAPTCHA_PATH . 'include/picture.inc.php');
   }
   else if (isset($page['section']))
@@ -77,19 +72,30 @@ function easycaptcha_document_init()
       $conf['EasyCaptcha']['activate_on']['category']
       )
     {
-      $conf['EasyCaptcha']['template'] = 'comment';
       include(EASYCAPTCHA_PATH . 'include/category.inc.php');
     }
     else if ($page['section'] == 'contact' && $conf['EasyCaptcha']['activate_on']['contactform'])
     {
-      $conf['EasyCaptcha']['template'] = 'contactform';
       include(EASYCAPTCHA_PATH . 'include/contactform.inc.php');
     }
     else if ($page['section'] == 'guestbook' && $conf['EasyCaptcha']['activate_on']['guestbook'])
     {
-      $conf['EasyCaptcha']['template'] = 'guestbook';
       include(EASYCAPTCHA_PATH . 'include/guestbook.inc.php');
     }
+  }
+}
+function easycaptcha_register_init()
+{
+  global $conf;
+
+  if (!is_a_guest())
+  {
+    return;
+  }
+
+  if ($conf['EasyCaptcha']['activate_on']['register'])
+  {
+    include(EASYCAPTCHA_PATH . 'include/register.inc.php');
   }
 }
 

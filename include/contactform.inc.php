@@ -1,21 +1,10 @@
 <?php
 defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
 
+$conf['EasyCaptcha']['template'] = 'contactform';
 include(EASYCAPTCHA_PATH.'include/common.inc.php');
-add_event_handler('loc_begin_index', 'add_easycaptcha');
+
 add_event_handler('contact_form_check', 'check_easycaptcha', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
-
-function add_easycaptcha()
-{
-  global $template;
-  $template->set_prefilter('contactform', 'prefilter_easycaptcha');
-}
-
-function prefilter_easycaptcha($content, $smarty)
-{
-  $search = '{$contact.content}</textarea></td>';
-  return str_replace($search, $search."\n{\$EASYCAPTCHA_CONTENT}", $content);
-}
 
 function check_easycaptcha($action, $comment)
 {
