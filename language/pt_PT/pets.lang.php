@@ -20,22 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['bat'] = 'Morcego';
-$lang['ladybug'] = 'Joaninha';
-$lang['lion'] = 'Le#ao';
-$lang['toucan'] = 'Tucano';
-$lang['butterfly'] = 'Borboleta';
-$lang['cat'] = 'Gato';
-$lang['dog'] = 'Cão';
-$lang['duck'] = 'Pato';
-$lang['eagle'] = 'Aguia';
-$lang['elephant'] = 'Elefante';
-$lang['fish'] = 'Peixe';
-$lang['fox'] = 'Raposa';
-$lang['frog'] = 'R#a';
+$lang['bat'] = 'O morcego';
+$lang['ladybug'] = 'A joaninha';
+$lang['lion'] = 'O leão';
+$lang['toucan'] = 'O tucano';
+$lang['butterfly'] = 'A borboleta';
+$lang['cat'] = 'O gato';
+$lang['dog'] = 'O cão';
+$lang['duck'] = 'O pato';
+$lang['eagle'] = 'A águia';
+$lang['elephant'] = 'O elefante';
+$lang['fish'] = 'O peixe';
+$lang['fox'] = 'A raposa';
+$lang['frog'] = 'A rã';
 $lang['horse'] = 'Cavalo';
 $lang['mouse'] = 'Rato';
-$lang['panda'] = 'Panda';
-$lang['penguin'] = 'Pinguim';
-$lang['snake'] = 'Cobra';
+$lang['panda'] = 'O panda';
+$lang['penguin'] = 'O pinguim';
+$lang['snake'] = 'A cobra';
 ?>

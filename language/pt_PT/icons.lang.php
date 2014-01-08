@@ -20,29 +20,29 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['ball'] = 'Bola';
+$lang['ball'] = 'A bola';
 $lang['scissors'] = 'Tesoura';
 $lang['shoe'] = 'Sapato';
 $lang['shopping cart'] = 'Carro de compras';
 $lang['suitcase'] = 'Mala';
 $lang['trash'] = 'Lixo';
 $lang['DVD'] = 'DVD';
-$lang['battery'] = 'Bateria';
-$lang['bicycle'] = 'Bicicleta';
-$lang['binoculars'] = 'Binóculos';
-$lang['book'] = 'Livro';
-$lang['calculator'] = 'Calculadora';
-$lang['calendar'] = 'Calendário';
-$lang['camera'] = 'Câmara';
-$lang['car'] = 'Carro';
-$lang['cookie'] = 'Biscoito';
-$lang['disk'] = 'Disco';
-$lang['guitar'] = 'Guitarra';
-$lang['hat'] = 'Chapéu';
-$lang['house'] = 'Casa';
-$lang['lock'] = 'Fechar';
-$lang['magnifying glass'] = 'Lupa';
-$lang['mobile phone'] = 'Telemóvel';
-$lang['pencil'] = 'Lápis';
-$lang['printer'] = 'Impressora';
+$lang['battery'] = 'A bateria';
+$lang['bicycle'] = 'A bicicleta';
+$lang['binoculars'] = 'Os binóculos';
+$lang['book'] = 'O livro';
+$lang['calculator'] = 'A calculadora';
+$lang['calendar'] = 'O calendário';
+$lang['camera'] = 'A câmara';
+$lang['car'] = 'O carro';
+$lang['cookie'] = 'O biscoito';
+$lang['disk'] = 'O disco';
+$lang['guitar'] = 'A guitarra';
+$lang['hat'] = 'O chapéu';
+$lang['house'] = 'A casa';
+$lang['lock'] = 'O fecho';
+$lang['magnifying glass'] = 'A lupa';
+$lang['mobile phone'] = 'O telemóvel';
+$lang['pencil'] = 'O lápis';
+$lang['printer'] = 'A impressora';
 ?>
