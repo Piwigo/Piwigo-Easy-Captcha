@@ -20,29 +20,29 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['scissors'] = 'schaar';
-$lang['shoe'] = 'schoen';
-$lang['shopping cart'] = 'winkelwagen';
-$lang['suitcase'] = 'koffer';
-$lang['trash'] = 'prullenbak';
-$lang['battery'] = 'batterij';
-$lang['DVD'] = 'DVD';
-$lang['ball'] = 'bal';
-$lang['bicycle'] = 'fiets';
-$lang['binoculars'] = 'verrekijker';
-$lang['book'] = 'boek';
-$lang['calculator'] = 'rekenmachine';
-$lang['calendar'] = 'kalender';
-$lang['camera'] = 'camera';
-$lang['car'] = 'auto';
-$lang['cookie'] = 'koekje';
-$lang['disk'] = 'schijf';
-$lang['guitar'] = 'gitaar';
-$lang['hat'] = 'hoed';
-$lang['house'] = 'huis';
-$lang['lock'] = 'slot';
-$lang['magnifying glass'] = 'vergrootglas';
-$lang['mobile phone'] = 'mobieltje';
-$lang['pencil'] = 'potlood';
-$lang['printer'] = 'printer';
+$lang['scissors'] = 'de schaar';
+$lang['shoe'] = 'de schoen';
+$lang['shopping cart'] = 'de winkelwagen';
+$lang['suitcase'] = 'de koffer';
+$lang['trash'] = 'de prullenbak';
+$lang['battery'] = 'de batterij';
+$lang['DVD'] = 'de DVD';
+$lang['ball'] = 'de bal';
+$lang['bicycle'] = 'de fiets';
+$lang['binoculars'] = 'de verrekijker';
+$lang['book'] = 'het boek';
+$lang['calculator'] = 'de rekenmachine';
+$lang['calendar'] = 'de kalender';
+$lang['camera'] = 'de camera';
+$lang['car'] = 'de auto';
+$lang['cookie'] = 'het koekje';
+$lang['disk'] = 'de schijf';
+$lang['guitar'] = 'de gitaar';
+$lang['hat'] = 'de hoed';
+$lang['house'] = 'het huis';
+$lang['lock'] = 'het slot';
+$lang['magnifying glass'] = 'het vergrootglas';
+$lang['mobile phone'] = 'het mobieltje';
+$lang['pencil'] = 'het potlood';
+$lang['printer'] = 'de printer';
 ?>
