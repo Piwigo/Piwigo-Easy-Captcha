@@ -20,29 +20,29 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['scissors'] = 'saks';
-$lang['shoe'] = 'sko';
-$lang['shopping cart'] = 'indkøbsvogn';
-$lang['suitcase'] = 'kuffert';
-$lang['trash'] = 'affald';
-$lang['DVD'] = 'Dvd';
-$lang['ball'] = 'bold';
-$lang['battery'] = 'batteri';
-$lang['bicycle'] = 'cykel';
-$lang['binoculars'] = 'kikkert';
-$lang['book'] = 'bog';
-$lang['calculator'] = 'regnemaskine';
-$lang['calendar'] = 'kalender';
-$lang['camera'] = 'kamera';
-$lang['car'] = 'bil';
-$lang['cookie'] = 'småkage';
-$lang['disk'] = 'disk';
-$lang['guitar'] = 'guitar';
-$lang['hat'] = 'hat';
-$lang['house'] = 'hus';
-$lang['lock'] = 'lås';
-$lang['magnifying glass'] = 'forstørrelsesglas';
-$lang['mobile phone'] = 'mobiltelefon';
-$lang['pencil'] = 'blyant';
-$lang['printer'] = 'printer';
+$lang['scissors'] = 'saksen';
+$lang['shoe'] = 'skoen';
+$lang['shopping cart'] = 'indkøbsvognen';
+$lang['suitcase'] = 'kufferten';
+$lang['trash'] = 'affaldet';
+$lang['DVD'] = 'dvd\'en';
+$lang['ball'] = 'bolden';
+$lang['battery'] = 'batteriet';
+$lang['bicycle'] = 'cyklen';
+$lang['binoculars'] = 'kikkerten';
+$lang['book'] = 'bogen';
+$lang['calculator'] = 'regnemaskinen';
+$lang['calendar'] = 'kalenderen';
+$lang['camera'] = 'kameraet';
+$lang['car'] = 'bilen';
+$lang['cookie'] = 'småkagen';
+$lang['disk'] = 'disken';
+$lang['guitar'] = 'guitaren';
+$lang['hat'] = 'hatten';
+$lang['house'] = 'huset';
+$lang['lock'] = 'låsen';
+$lang['magnifying glass'] = 'forstørrelsesglasset';
+$lang['mobile phone'] = 'mobiltelefonen';
+$lang['pencil'] = 'blyanten';
+$lang['printer'] = 'printeren';
 ?>

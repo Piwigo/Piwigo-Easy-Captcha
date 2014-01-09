@@ -20,22 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['bat'] = 'flagermus';
-$lang['butterfly'] = 'sommerfugl';
-$lang['cat'] = 'kat';
-$lang['dog'] = 'hund';
-$lang['duck'] = 'and';
-$lang['eagle'] = 'ørn';
-$lang['elephant'] = 'elefant';
-$lang['fish'] = 'fisk';
-$lang['fox'] = 'ræv';
-$lang['frog'] = 'frø';
-$lang['horse'] = 'hest';
-$lang['ladybug'] = 'mariehøne';
-$lang['lion'] = 'løve';
-$lang['mouse'] = 'mus';
-$lang['panda'] = 'panda';
-$lang['penguin'] = 'pingvin';
-$lang['snake'] = 'slange';
-$lang['toucan'] = 'tukan';
+$lang['bat'] = 'flagermusen';
+$lang['butterfly'] = 'sommerfuglen';
+$lang['cat'] = 'katten';
+$lang['dog'] = 'hunden';
+$lang['duck'] = 'anden';
+$lang['eagle'] = 'ørnen';
+$lang['elephant'] = 'elefanten';
+$lang['fish'] = 'fisken';
+$lang['fox'] = 'ræven';
+$lang['frog'] = 'frøen';
+$lang['horse'] = 'hesten';
+$lang['ladybug'] = 'mariehønen';
+$lang['lion'] = 'løven';
+$lang['mouse'] = 'musen';
+$lang['panda'] = 'pandaen';
+$lang['penguin'] = 'pingvinen';
+$lang['snake'] = 'slangen';
+$lang['toucan'] = 'tukanen';
 ?>
