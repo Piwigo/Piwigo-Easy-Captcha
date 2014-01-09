@@ -34,4 +34,5 @@ $lang['Drop border'] = 'Межа Drop';
 $lang['Image'] = 'Зображення';
 $lang['Image border'] = 'Межа зображення';
 $lang['Marks'] = 'Маркування';
+$lang['Nowhere'] = 'Ніде';
 ?>
