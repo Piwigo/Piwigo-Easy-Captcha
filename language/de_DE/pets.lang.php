@@ -20,22 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['ladybug'] = 'Marienkäfer';
-$lang['bat'] = 'Fledermaus';
-$lang['butterfly'] = 'Schmetterling';
-$lang['cat'] = 'Katze';
-$lang['dog'] = 'Hund';
-$lang['duck'] = 'Ente';
-$lang['eagle'] = 'Adler';
-$lang['elephant'] = 'Elefant';
-$lang['fish'] = 'Fisch';
-$lang['fox'] = 'Fuchs';
-$lang['frog'] = 'Frosch';
-$lang['horse'] = 'Pferd';
-$lang['lion'] = 'Löwe';
-$lang['mouse'] = 'Maus';
-$lang['panda'] = 'Pandabär';
-$lang['penguin'] = 'Pinguin';
-$lang['snake'] = 'Schlange';
-$lang['toucan'] = 'Toucan (Pfefferfresser)';
+$lang['ladybug'] = 'der Marienkäfer';
+$lang['bat'] = 'die Fledermaus';
+$lang['butterfly'] = 'der Schmetterling';
+$lang['cat'] = 'die Katze';
+$lang['dog'] = 'der Hund';
+$lang['duck'] = 'die Ente';
+$lang['eagle'] = 'der Adler';
+$lang['elephant'] = 'der Elefant';
+$lang['fish'] = 'der Fisch';
+$lang['fox'] = 'der Fuchs';
+$lang['frog'] = 'der Frosch';
+$lang['horse'] = 'das Pferd';
+$lang['lion'] = 'der Löwe';
+$lang['mouse'] = 'die Maus';
+$lang['panda'] = 'der Pandabär';
+$lang['penguin'] = 'der Pinguin';
+$lang['snake'] = 'die Schlange';
+$lang['toucan'] = 'der Toucan (Pfefferfresser)';
 ?>

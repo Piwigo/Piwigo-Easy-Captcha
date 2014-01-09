@@ -8,7 +8,7 @@ $lang['Contact form'] = 'Kontakt Formular';
 $lang['Guestbook'] = 'Gästebuch';
 $lang['Picture comments'] = 'Bilder Kommentare';
 $lang['Register form'] = 'Registrierungs-Formular ';
-$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Um festzustellen, dass du ein Mensch bist, bitte das <b>%s</b> in das äusserste rechte Kästchen platzieren.';
+$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Um festzustellen, dass du ein Mensch bist, bitte <b>%s</b> in das äusserste rechte Kästchen platzieren.';
 $lang['You are player X, click on the right case to complete the line.'] = 'Du bist Spieler X, klicke auf den rechten Kasten , um die Zeile zu vervollständigen.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'JavaScript muss aktiviert sein, um einen Kommentar schreiben zu können.
 Entschuldigung für die Unannehmlichkeit.';
