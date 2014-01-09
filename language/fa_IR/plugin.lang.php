@@ -4,7 +4,8 @@ $lang['Picture comments'] = 'نظرات عکس';
 $lang['Register form'] = 'فرم ثبت نام';
 $lang['Preview'] = 'نمایش';
 $lang['Moderate'] = 'مدیریت';
-$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'برای بررسی شما یک انسان هستید، لطفا به جعبه سمت راست بیشتر قرار دادن <b>%s</b>.';
+$lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'برای بررسی شما یک انسان هستید،<b>%s</b> لطفا به جعبه سمت راست بیشتر قرار دادن
+ .';
 $lang['You are player X, click on the right case to complete the line.'] = ' x بازی کنید ,کلیک راست برای تکیمل خط  شما باید';
 $lang['Pleaser answer'] = 'جواب ';
 $lang['Random'] = 'انتخابی';
