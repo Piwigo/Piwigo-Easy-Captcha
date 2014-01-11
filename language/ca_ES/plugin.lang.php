@@ -32,4 +32,6 @@ $lang['Number of images'] = 'Número d\'imatges';
 $lang['Random'] = 'Aleatori';
 $lang['Text'] = 'Texte';
 $lang['Theme'] = 'Tema';
+$lang['Nowhere'] = 'Enlloc';
+$lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Hem detectat que a la vostra galeria està disponible el connector Crypto Captcha. Tots dos connectors es poden utilitzar al mateix temps, però no els podeu actvar junts a la mateixa pàgina.';
 ?>

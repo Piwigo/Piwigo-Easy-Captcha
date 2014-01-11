@@ -37,4 +37,5 @@ $lang['fox'] = 'guineu';
 $lang['horse'] = 'caball';
 $lang['mouse'] = 'ratolí';
 $lang['snake'] = 'serp';
+$lang['toucan'] = 'el tucà';
 ?>

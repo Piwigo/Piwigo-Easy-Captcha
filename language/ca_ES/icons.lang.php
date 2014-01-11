@@ -42,4 +42,7 @@ $lang['guitar'] = 'guitarra';
 $lang['hat'] = 'barret';
 $lang['house'] = 'caball';
 $lang['pencil'] = 'llapis';
+$lang['binoculars'] = 'els prismàtics';
+$lang['lock'] = 'el pany';
+$lang['magnifying glass'] = 'la lupa';
 ?>
