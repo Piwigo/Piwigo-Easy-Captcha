@@ -49,4 +49,11 @@ $lang['Image border'] = 'Bildobordero';
 $lang['Image size'] = 'Bilda grandeco';
 $lang['Invalid answer'] = 'Nevalida respondo';
 $lang['Invalid color code <i>%s</i>'] = 'Nevalida kolorkodo <i>%s</i>';
+$lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Ni detektas, ke la kromaĵo Crypto Captcha disponeblas en via galerio. Ambaŭ kromaĵoj povas uziĝi samtempe, sed vi nepre ne aktivigu ambaŭ ilin sur la sama paĝo.';
+$lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Tiu testo bezonas, ke JavaScript aktiviĝu en la vizitanta foliumilo. Ĉirkaŭ 1% da retaj uzantoj havas malaktivan kromaĵon JavaScript.';
+$lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Vi devas aktivigi la komaĵon JavaScript en via foliumilo, por ke vi povu aldoni komenton, pardonon pro la ĝeno.';
+$lang['You are player X, click on the right case to complete the line.'] = 'Vi estas la X-ludanto, alklaku sur la taŭga kadro por kompletigi linion.';
+$lang['Image drag & drop'] = 'Ŝovmeti bildon';
+$lang['Tic-tac-toe minigame'] = 'Ludeto X-kaj-O';
+$lang['Tic-tac-toe options'] = 'Opcioj de la ludo X-kaj-O';
 ?>
