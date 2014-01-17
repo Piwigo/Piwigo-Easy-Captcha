@@ -102,7 +102,7 @@ function check_color($hex)
   {
     $hex = $hex[0].$hex[0].$hex[1].$hex[1].$hex[2].$hex[2];
   }
-  else if (strlen($hex) != 6)
+  else if (strlen($hex) != 6 || !ctype_xdigit($hex))
   {
     $page['errors'][] = l10n('Invalid color code <i>%s</i>', '#'.$hex);
     $hex = '000000';
