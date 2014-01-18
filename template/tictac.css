@@ -4,7 +4,6 @@
   border-collapse: collapse;
   display: inline-block;
   margin: 0;
-  background: url('../tictac/gen.php?t={$smarty.now}') no-repeat;
 }
 #easycaptcha td {
   border: none;

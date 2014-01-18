@@ -32,6 +32,12 @@
 {else if $EASYCAPTCHA.challenge == 'tictac'}
 {combine_css id='easycaptcha.tictac' path=$EASYCAPTCHA_PATH|cat:'template/tictac.css' template=true version=$EASYCAPTCHA.lastmod}
 
+{html_style}
+#easycaptcha table {
+  background: url('$ROOT_URL}{$EASYCAPTCHA_PATH}tictac/gen.php?t={$smarty.now}') no-repeat;
+}
+{/html_style}
+
 {footer_script require='jquery'}
 (function($){
 $('#easycaptcha input').on('change', function() {
