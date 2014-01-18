@@ -34,7 +34,7 @@
 
 {html_style}
 #easycaptcha table {
-  background: url('$ROOT_URL}{$EASYCAPTCHA_PATH}tictac/gen.php?t={$smarty.now}') no-repeat;
+  background: url('{$ROOT_URL}{$EASYCAPTCHA_PATH}tictac/gen.php?t={$smarty.now}') no-repeat;
 }
 {/html_style}
 
