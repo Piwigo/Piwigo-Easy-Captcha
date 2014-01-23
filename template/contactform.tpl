@@ -5,7 +5,7 @@
   {if $EASYCAPTCHA.challenge == 'drag'}
   <td class="title"></td>
   <td>
-    {'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate:$EASYCAPTCHA.drag.text}
+    <span class="easycaptcha_hint">{'To verify you are a human, please place the <b>%s</b> in the most right box bellow.'|translate:$EASYCAPTCHA.drag.text}</span>
     {$smarty.capture.easycaptcha}
   </td>
 
@@ -18,7 +18,7 @@
   {else if $EASYCAPTCHA.challenge == 'tictac'}
   <td class="title"></td>
   <td>
-    {'You are player X, click on the right case to complete the line.'|translate}
+    <span class="easycaptcha_hint">{'You are player X, click on the right case to complete the line.'|translate}</span>
     {$smarty.capture.easycaptcha}
   </td>
 
