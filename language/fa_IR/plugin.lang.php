@@ -34,4 +34,9 @@ $lang['Invalid color code <i>%s</i>'] = 'رنگ های با کد باطل<i>%s</
 $lang['Marks'] = 'سبرچسب';
 $lang['Nowhere'] = 'همین اینجا';
 $lang['Number of images'] = 'عددازعکس  ';
+$lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = ' Cryptoما متوجه شدیم که پلاگین 
+ در گالری شما در دسترس است
+هردو پلاگین را می توان در هر زمان استفاده کرد
+اما شمانباید تحت هیچ شرایطی هردو رادر یک صفحه فعال کنید ';
+$lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'به منظور اضافه کردن نظرات شما باید جاوا اسکریپت را فعال کنید .متاسفیم برای این ناسازگاری';
 ?>
