@@ -1,0 +1,1 @@
+Egy eredményesen használható rendszer bot-ok kiszűréséhez hozzászólásoknál, regisztrációnál, kapcsolati űrlapnál és vendégkönyvnél.

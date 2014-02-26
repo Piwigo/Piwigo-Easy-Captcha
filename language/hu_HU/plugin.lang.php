@@ -23,4 +23,14 @@ $lang['Colors'] = 'Szinek';
 $lang['Comments action'] = 'Hozzászólások művelet';
 $lang['Image'] = 'Kép';
 $lang['Text'] = 'Szöveg';
+$lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Az Crypto Captcha bővítmény jelenléte érzékelhető a galériában. Használható egy időben mindkét bővítmény, azonban ügyelni kell arra, hogy a két bővítmény ne legyen egyszerre aktív egyazon oldalon.';
+$lang['Challenge'] = 'Feladat';
+$lang['Image drag & drop'] = 'Kép húzd és dobd';
+$lang['Invalid answer'] = 'Hibás válasz';
+$lang['Invalid color code <i>%s</i>'] = 'Érvénytelen színkód <i>%s</i>';
+$lang['Marks'] = 'Jelek';
+$lang['Nowhere'] = 'Sehol';
+$lang['Pleaser answer'] = 'Kérem, válaszoljon';
+$lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Ez a feladat megköveteli, hogy a JavaScript engedélyezve legyen a látogató böngészőjében. Az internet felhasználók körülbelül 1%-ánál van kikapcsolva a JavaScript.';
+$lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Hozzászóláshoz engedélyezni kell a JavaScript-et a böngészőben. Elnézést a kellemetlenségért.';
 ?>
