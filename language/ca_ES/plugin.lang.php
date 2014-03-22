@@ -1,8 +1,8 @@
 <?php
-$lang['Activate on'] = 'Activa en';
+$lang['Activate on'] = 'Activa a';
 $lang['Preview'] = 'Previsualització';
 $lang['Register form'] = 'Formulari de registre';
-$lang['Album comments'] = 'Comentaris dels àlbums';
+$lang['Album comments'] = 'Comentaris de l\'àlbum';
 $lang['Comments action'] = 'Acció dels comentaris';
 $lang['Guestbook'] = 'Llibre de visites';
 $lang['Moderate'] = 'Moderat';
@@ -34,4 +34,4 @@ $lang['Text'] = 'Texte';
 $lang['Theme'] = 'Tema';
 $lang['Nowhere'] = 'Enlloc';
 $lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Hem detectat que a la vostra galeria està disponible el connector Crypto Captcha. Tots dos connectors es poden utilitzar al mateix temps, però no els podeu actvar junts a la mateixa pàgina.';
-?>
+$lang['Drop border'] = 'Arrastra vora';
