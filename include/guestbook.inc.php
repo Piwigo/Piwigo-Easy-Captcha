@@ -10,8 +10,6 @@ function check_easycaptcha($action, $comment)
 {
   global $conf, $page;
 
-  if (!is_a_guest()) return $action;
-
   if (!easycaptcha_check())
   {
     $page['errors'][] = l10n('Invalid answer');

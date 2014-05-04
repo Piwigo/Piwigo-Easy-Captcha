@@ -23,8 +23,6 @@ function check_easycaptcha($action, $comment)
 {
   global $conf, $page;
 
-  if (!is_a_guest()) return $action;
-
   if (!easycaptcha_check())
   {
     if ($conf['EasyCaptcha']['comments_action'] == 'reject') $page['errors'][] = l10n('Invalid answer');

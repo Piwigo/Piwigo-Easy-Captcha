@@ -27,6 +27,7 @@ if (isset($_POST['submit']))
       'guestbook'   => in_array('guestbook', $_POST['activate_on']) || !$loaded['guestbook'],
       ),
     'comments_action' => $_POST['comments_action'],
+    'guest_only' => isset($_POST['guest_only']),
     'challenge' => $_POST['challenge'],
     'drag' => array(
       'theme' => $_POST['drag']['theme'],

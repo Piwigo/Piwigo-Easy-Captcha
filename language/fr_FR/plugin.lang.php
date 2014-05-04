@@ -35,4 +35,4 @@ $lang['You must activate JavaScript in your browser in order to be able to add a
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Ce test requiert que JavaScript soit activé sur le navigateur du visiteur. Environ 1% des utilisateurs d\'Internet ont JavaScript désactivé.';
 $lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Nous avons détecté que Crypto Captcha est activé sur votre galerie. Les deux plugins peuvent fonctionner en même temps, mais sous aucun prétexte ils ne doivent être activés sur les mêmes pages.';
 $lang['Nowhere'] = 'Nulle part';
-?>
+$lang['Only for unauthenticated users'] = 'Seulement pour les utilisateurs non connectés';

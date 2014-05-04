@@ -118,6 +118,10 @@ $('.preview').prevAll('a').on('click', function() {
 
   <ul>
     <li>
+      <b><label for="guest_only">{'Only for unauthenticated users'|translate}</label></b>
+      <input type="checkbox" name="guest_only" id="guest_only" {if $easycaptcha.guest_only}checked{/if}>
+    </li>
+    <li>
       <b>{'Activate on'|translate}</b>
       <select name="activate_on[]" multiple>
         <option value="picture" {if $easycaptcha.activate_on.picture}selected{/if}>{'Picture comments'|translate}</option>

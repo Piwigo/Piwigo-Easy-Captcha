@@ -20,6 +20,7 @@ class EasyCaptcha_maintain extends PluginMaintain
           'guestbook'   => true,
           ),
         'comments_action' => 'reject',
+        'guest_only'      => true,
         'challenge' => 'random',
         'drag' => array(
           'theme' => 'icons',
@@ -54,6 +55,10 @@ class EasyCaptcha_maintain extends PluginMaintain
       if (empty($old_conf['lastmod']))
       {
         $old_conf['lastmod'] = time();
+      }
+      if (!isset($old_conf['guest_only']))
+      {
+        $old_conf['guest_only'] = true;
       }
 
       $conf['EasyCaptcha'] = serialize($old_conf);
