@@ -35,4 +35,4 @@ $lang['Drop border'] = 'Граница цели';
 $lang['Image drag & drop'] = '"Схвати и перенеси"';
 $lang['Drop'] = 'Цель';
 $lang['Nowhere'] = 'Нигде';
-?>
+$lang['Only for unauthenticated users'] = 'Только для неидентифицированных пользователей';
