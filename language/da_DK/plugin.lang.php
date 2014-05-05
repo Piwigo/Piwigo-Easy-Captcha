@@ -35,4 +35,4 @@ $lang['Text'] = 'Tekst';
 $lang['Theme'] = 'Tema';
 $lang['Tic-tac-toe minigame'] = 'Kryds og bolle-minispil';
 $lang['Nowhere'] = 'Intetsteds';
-?>
+$lang['Only for unauthenticated users'] = 'Kun for ikke-autentificerede brugere';
