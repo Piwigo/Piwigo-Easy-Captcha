@@ -34,4 +34,5 @@ $lang['Theme'] = 'Tema';
 $lang['Image drag & drop'] = 'Bild drag & drop';
 $lang['Marks'] = 'Markeringar';
 $lang['You are player X, click on the right case to complete the line.'] = 'Du är spelare X, klicka på höger shift för att fullborda raden';
-?>
+$lang['Nowhere'] = 'Ingenstans';
+$lang['Only for unauthenticated users'] = 'Endast för autentiserade användare';
