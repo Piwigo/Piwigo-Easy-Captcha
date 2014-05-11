@@ -35,4 +35,4 @@ $lang['Image size'] = 'Veľkosť fotky';
 $lang['Invalid answer'] = 'Nesprávna odpoveď';
 $lang['Invalid color code <i>%s</i>'] = 'Nesprávny kód farby <i>%s</i>';
 $lang['Nowhere'] = 'Nikde';
-?>
+$lang['Only for unauthenticated users'] = 'Len pre neautorizovaných používateľov';
