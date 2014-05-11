@@ -35,4 +35,4 @@ $lang['Invalid answer'] = 'Μη έγκυρη απάντηση';
 $lang['Image size'] = 'Μέγεθος Εικόνας';
 $lang['Image drag & drop'] = 'Drag & drop εικόνας';
 $lang['Nowhere'] = 'Πουθενά';
-?>
+$lang['Only for unauthenticated users'] = 'Μόνο για μη εξουσιοδοτημένους χρήστες';
