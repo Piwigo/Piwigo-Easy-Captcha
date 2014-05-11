@@ -39,4 +39,4 @@ $lang['We detected that Crypto Captcha plugin is available on your gallery. Both
 هردو پلاگین را می توان در هر زمان استفاده کرد
 اما شمانباید تحت هیچ شرایطی هردو رادر یک صفحه فعال کنید ';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'به منظور اضافه کردن نظرات شما باید جاوا اسکریپت را فعال کنید .متاسفیم برای این ناسازگاری';
-?>
+$lang['Only for unauthenticated users'] = 'تنها برای کاربران غیر مجاز';
