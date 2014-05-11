@@ -35,4 +35,4 @@ $lang['Random'] = 'Acaso';
 $lang['Text'] = 'Texto';
 $lang['Theme'] = 'Tema';
 $lang['Nowhere'] = 'Em parte alguma';
-?>
+$lang['Only for unauthenticated users'] = 'Apenas para utilizadores não autenticados';
