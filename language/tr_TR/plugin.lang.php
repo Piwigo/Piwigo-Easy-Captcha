@@ -35,4 +35,4 @@ $lang['Challenge'] = 'Sınama';
 $lang['Background'] = 'Arkaplan';
 $lang['Drag & drop options'] = 'Sürükle ve bırak seçenekleri';
 $lang['Nowhere'] = 'Hiçbir yere';
-?>
+$lang['Only for unauthenticated users'] = 'Sadece kimliği doğrulanmamış kullanıcılar için';
