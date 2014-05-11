@@ -35,4 +35,4 @@ $lang['This challenge requires that JavaScript is enabled on the visitor browser
 $lang['Tic-tac-toe minigame'] = '井字小游戏';
 $lang['Tic-tac-toe options'] = '井字游戏选项';
 $lang['Nowhere'] = '任何地方都不';
-?>
+$lang['Only for unauthenticated users'] = '只为未注册用户';
