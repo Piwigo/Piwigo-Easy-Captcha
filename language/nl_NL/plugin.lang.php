@@ -35,4 +35,4 @@ $lang['We detected that Crypto Captcha plugin is available on your gallery. Both
 $lang['You are player X, click on the right case to complete the line.'] = 'U bent speler X, klik in het spel op die plek van de regel waarmee u de regel compleet maakt.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'U dient JavaScript in uw browser in te schakelen om commentaar te kunnen toevoegen. Sorry voor het ongemak.';
 $lang['Nowhere'] = 'Nergens';
-?>
+$lang['Only for unauthenticated users'] = 'Alleen voor niet-geverifieerde gebruikers';
