@@ -33,4 +33,4 @@ $lang['Nowhere'] = 'Sehol';
 $lang['Pleaser answer'] = 'Kérem, válaszoljon';
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = 'Ez a feladat megköveteli, hogy a JavaScript engedélyezve legyen a látogató böngészőjében. Az internet felhasználók körülbelül 1%-ánál van kikapcsolva a JavaScript.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Hozzászóláshoz engedélyezni kell a JavaScript-et a böngészőben. Elnézést a kellemetlenségért.';
-?>
+$lang['Only for unauthenticated users'] = 'Csak ellenőrzött felhasználóknak';
