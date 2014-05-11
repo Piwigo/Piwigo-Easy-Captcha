@@ -35,4 +35,4 @@ $lang['Image drag & drop'] = 'Drag & drop immagine';
 $lang['Image'] = 'Immagine';
 $lang['Image border'] = 'Bordo immagine';
 $lang['Nowhere'] = 'Da nessuna parte';
-?>
+$lang['Only for unauthenticated users'] = 'Solo per gli utenti non autenticati';
