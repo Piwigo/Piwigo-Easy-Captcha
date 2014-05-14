@@ -37,4 +37,4 @@ $lang['Text'] = 'Text';
 $lang['Theme'] = 'Thema';
 $lang['Tic-tac-toe minigame'] = 'Tic-Tyc-Toe Minispiel';
 $lang['Nowhere'] = 'Nirgends';
-?>
+$lang['Only for unauthenticated users'] = 'Nur für authentifizierte Benutzer';
