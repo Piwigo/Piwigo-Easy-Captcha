@@ -54,7 +54,7 @@ function easycaptcha_document_init()
 {
   global $conf, $pwg_loaded_plugins, $page;
 
-  if (!is_a_guest() && $conf['cryptographp']['guest_only'])
+  if (!is_a_guest() && $conf['EasyCaptcha']['guest_only'])
   {
     return;
   }
