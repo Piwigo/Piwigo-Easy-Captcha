@@ -34,4 +34,5 @@ $lang['Tic-tac-toe minigame'] = 'Minigierka "Kółko i krzyżyk"';
 $lang['Tic-tac-toe options'] = 'Opcje "Kółko i krzyżyk"';
 $lang['You are player X, click on the right case to complete the line.'] = 'Jesteś graczem X, kliknij w odpowiednie pole aby skompletować linię.';
 $lang['Comments action'] = 'Akcje komentarzy';
-?>
+$lang['Nowhere'] = 'Nigdzie';
+$lang['Only for unauthenticated users'] = 'Tylko dla użytkowników nieuwierzytelnionych';
