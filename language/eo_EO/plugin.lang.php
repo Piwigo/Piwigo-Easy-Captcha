@@ -56,4 +56,4 @@ $lang['You are player X, click on the right case to complete the line.'] = 'Vi e
 $lang['Image drag & drop'] = 'Ŝovmeti bildon';
 $lang['Tic-tac-toe minigame'] = 'Ludeto X-kaj-O';
 $lang['Tic-tac-toe options'] = 'Opcioj de la ludo X-kaj-O';
-?>
+$lang['Only for unauthenticated users'] = 'Nur por la neaŭtentigitaj uzantoj';
