@@ -35,4 +35,4 @@ $lang['Text'] = '文本';
 $lang['Theme'] = '主題';
 $lang['This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'] = '這一挑戰要求在訪問者的瀏覽器中啟用JavaScript。約1％的互聯網用戶已禁用JavaScript。';
 $lang['Nowhere'] = '無處不在';
-?>
+$lang['Only for unauthenticated users'] = '僅適用於未經驗證的用戶';
