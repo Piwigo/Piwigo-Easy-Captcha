@@ -52,7 +52,7 @@ if (isset($_POST['submit']))
     'lastmod' => time(),
     );
 
-  conf_update_param('EasyCaptcha', serialize($conf['EasyCaptcha']));
+  conf_update_param('EasyCaptcha', $conf['EasyCaptcha']);
   $page['infos'][] = l10n('Information data registered in database');
 }
 

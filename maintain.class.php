@@ -3,8 +3,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 class EasyCaptcha_maintain extends PluginMaintain
 {
-  private $installed = false;
-
   function install($plugin_version, &$errors=array())
   {
     global $conf;
@@ -45,12 +43,11 @@ class EasyCaptcha_maintain extends PluginMaintain
         'lastmod' => time(),
         );
 
-      $conf['EasyCaptcha'] = serialize($default_config);
-      conf_update_param('EasyCaptcha', $conf['EasyCaptcha']);
+      conf_update_param('EasyCaptcha', $default_config, true);
     }
     else
     {
-      $old_conf = is_string($conf['EasyCaptcha']) ? unserialize($conf['EasyCaptcha']) : $conf['EasyCaptcha'];
+      $old_conf = safe_unserialize($conf['EasyCaptcha']);
 
       if (empty($old_conf['lastmod']))
       {
@@ -61,23 +58,13 @@ class EasyCaptcha_maintain extends PluginMaintain
         $old_conf['guest_only'] = true;
       }
 
-      $conf['EasyCaptcha'] = serialize($old_conf);
-      conf_update_param('EasyCaptcha', $conf['EasyCaptcha']);
-    }
-
-    $this->installed = true;
-  }
-
-  function activate($plugin_version, &$errors=array())
-  {
-    if (!$this->installed)
-    {
-      $this->install($plugin_version, $errors);
+      conf_update_param('EasyCaptcha', $old_conf, true);
     }
   }
 
-  function deactivate()
+  function update($old_version, $new_version, &$errors=array())
   {
+    $this->install($new_version, $errors);
   }
 
   function uninstall()

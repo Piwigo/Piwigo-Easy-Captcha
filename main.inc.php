@@ -19,7 +19,6 @@ if (mobile_theme())
 define('EASYCAPTCHA_ID',      basename(dirname(__FILE__)));
 define('EASYCAPTCHA_PATH' ,   PHPWG_PLUGINS_PATH . EASYCAPTCHA_ID . '/');
 define('EASYCAPTCHA_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . EASYCAPTCHA_ID);
-define('EASYCAPTCHA_VERSION', 'auto');
 
 
 add_event_handler('init', 'easycaptcha_init');
@@ -38,14 +37,10 @@ else
 // plugin init
 function easycaptcha_init()
 {
-  global $conf, $pwg_loaded_plugins;
-
-  include_once(EASYCAPTCHA_PATH . 'maintain.inc.php');
-  $maintain = new EasyCaptcha_maintain(EASYCAPTCHA_ID);
-  $maintain->autoUpdate(EASYCAPTCHA_VERSION, 'install');
+  global $conf;
+  $conf['EasyCaptcha'] = safe_unserialize($conf['EasyCaptcha']);
 
   load_language('plugin.lang', EASYCAPTCHA_PATH);
-  $conf['EasyCaptcha'] = unserialize($conf['EasyCaptcha']);
 }
 
 
