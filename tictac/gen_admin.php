@@ -1,5 +1,6 @@
 <?php
 define('PHPWG_ROOT_PATH', '../../../');
+define('IN_ADMIN', true);
 include(PHPWG_ROOT_PATH . 'include/common.inc.php');
 
 is_admin() or die('Hacking attempt!');
