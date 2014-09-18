@@ -1,7 +1,7 @@
 {combine_css path=$EASYCAPTCHA_PATH|cat:'template/style.css'}
 
-{combine_css path='themes/default/js/plugins/chosen.css'}
-{combine_script id='jquery.chosen' load='footer' path='themes/default/js/plugins/chosen.jquery.min.js'}
+{combine_css id='jquery.selectize' path="themes/default/js/plugins/selectize.{$themeconf.colorscheme}.css"}
+{combine_script id='jquery.selectize' load='footer' path='themes/default/js/plugins/selectize.min.js'}
 
 {combine_css path=$EASYCAPTCHA_PATH|cat:'template/bgrins-spectrum/spectrum.css'}
 {combine_script id='jquery.spectrum' load='footer' path=$EASYCAPTCHA_PATH|cat:'template/bgrins-spectrum/spectrum.js'}
@@ -14,11 +14,8 @@
 
 {footer_script}
 // multiselect
-$("select").css({
-    width: 300
-}).chosen({
-    disable_search:true,
-    placeholder_text_multiple: '{'Nowhere'|translate}'
+$('[name="activate_on[]"]').selectize({
+  plugins: ['remove_button']
 });
 
 // Spectrum settings
@@ -123,7 +120,7 @@ $('.preview').prevAll('a').on('click', function() {
     </li>
     <li>
       <b>{'Activate on'|translate}</b>
-      <select name="activate_on[]" multiple>
+      <select name="activate_on[]" multiple placeholder="{'Nowhere'|translate}">
         <option value="picture" {if $easycaptcha.activate_on.picture}selected{/if}>{'Picture comments'|translate}</option>
         {if $loaded.category}<option value="category" {if $easycaptcha.activate_on.category}selected{/if}>{'Album comments'|translate}</option>{/if}
         <option value="register" {if $easycaptcha.activate_on.register}selected{/if}>{'Register form'|translate}</option>

@@ -50,8 +50,9 @@
   list-style:none;
 }
 
-.chzn-choices li {
-  clear:none !important;
+.selectize-control {
+  width:300px;
+  display:inline-block;
 }
 
 table.colors {
