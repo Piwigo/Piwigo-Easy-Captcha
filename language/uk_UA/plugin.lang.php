@@ -35,4 +35,4 @@ $lang['Image'] = 'Зображення';
 $lang['Image border'] = 'Межа зображення';
 $lang['Marks'] = 'Маркування';
 $lang['Nowhere'] = 'Ніде';
-?>
+$lang['Only for unauthenticated users'] = 'Тільки для користувачів, що не пройшли перевірку';
