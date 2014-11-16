@@ -1,5 +1,5 @@
 <?php
-defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
+defined('EASYCAPTCHA_PATH') or die('Hacking attempt!');
 
 include_once(EASYCAPTCHA_PATH . 'drag/functions_drag.inc.php');
 

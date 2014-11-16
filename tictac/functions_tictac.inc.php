@@ -1,5 +1,5 @@
 <?php
-defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
+defined('EASYCAPTCHA_PATH') or die('Hacking attempt!');
 
 function hex2rgb($hex)
 {

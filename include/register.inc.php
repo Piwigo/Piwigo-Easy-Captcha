@@ -1,5 +1,5 @@
 <?php
-defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
+defined('EASYCAPTCHA_PATH') or die('Hacking attempt!');
 
 $conf['EasyCaptcha']['template'] = 'register';
 include(EASYCAPTCHA_PATH.'include/common.inc.php');

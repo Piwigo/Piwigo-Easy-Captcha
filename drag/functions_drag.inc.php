@@ -1,5 +1,5 @@
 <?php
-defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
+defined('EASYCAPTCHA_PATH') or die('Hacking attempt!');
 
 /*
  * crypt the name of an image, it use the Piwigo secret_key

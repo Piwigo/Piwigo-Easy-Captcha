@@ -2,7 +2,7 @@
 define('PHPWG_ROOT_PATH', '../../../');
 include(PHPWG_ROOT_PATH . 'include/common.inc.php');
 
-defined('EASYCAPTCHA_ID') or die('Hacking attempt!');
+defined('EASYCAPTCHA_PATH') or die('Hacking attempt!');
 include_once(EASYCAPTCHA_PATH . 'drag/functions_drag.inc.php');
 
 if (count($_GET) != 2) die('Hacking attempt!');

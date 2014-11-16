@@ -10,15 +10,24 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-// TODO : captcha on mobile
+if (basename(dirname(__FILE__)) != 'EasyCaptcha')
+{
+  add_event_handler('init', 'easycaptcha_error');
+  function easycaptcha_error()
+  {
+    global $page;
+    $page['errors'][] = 'Easy Captcha folder name is incorrect, uninstall the plugin and rename it to "EasyCaptcha"';
+  }
+  return;
+}
+
 if (mobile_theme())
 {
   return;
 }
 
-define('EASYCAPTCHA_ID',      basename(dirname(__FILE__)));
-define('EASYCAPTCHA_PATH' ,   PHPWG_PLUGINS_PATH . EASYCAPTCHA_ID . '/');
-define('EASYCAPTCHA_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . EASYCAPTCHA_ID);
+define('EASYCAPTCHA_PATH' ,   PHPWG_PLUGINS_PATH . 'EasyCaptcha/');
+define('EASYCAPTCHA_ADMIN',   get_root_url() . 'admin.php?page=plugin-EasyCaptcha');
 
 
 add_event_handler('init', 'easycaptcha_init');
