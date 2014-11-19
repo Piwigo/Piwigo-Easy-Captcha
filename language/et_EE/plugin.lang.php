@@ -55,4 +55,5 @@ $lang['Challenge'] = 'Ülesanne';
 $lang['Colors'] = 'Värvid';
 $lang['Comments action'] = 'Kommentaaride tegevused';
 $lang['Contact form'] = 'Kontakteerimise vorm';
-?>
+$lang['Nowhere'] = 'Mitte kusagil';
+$lang['Only for unauthenticated users'] = 'Ainult autoriseeritud kasutajatele';
