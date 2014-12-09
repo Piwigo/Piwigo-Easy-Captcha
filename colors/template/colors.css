@@ -1,0 +1,61 @@
+.easycaptcha.colors, .easycaptcha.noscript {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  background: {$EASYCAPTCHA.colors.bg1};
+  background: -webkit-linear-gradient(top, {$EASYCAPTCHA.colors.bg1} 0%, {$EASYCAPTCHA.colors.bg2} 100%);
+  background: -moz-linear-gradient(top, {$EASYCAPTCHA.colors.bg1} 0%, {$EASYCAPTCHA.colors.bg2} 100%);
+  background: -ms-linear-gradient(top, {$EASYCAPTCHA.colors.bg1} 0%, {$EASYCAPTCHA.colors.bg2} 100%);
+  background: -o-linear-gradient(top, {$EASYCAPTCHA.colors.bg1} 0%, {$EASYCAPTCHA.colors.bg2} 100%);
+  background: linear-gradient(to bottom, {$EASYCAPTCHA.colors.bg1} 0%, {$EASYCAPTCHA.colors.bg2} 100%);
+  border:1px solid {$EASYCAPTCHA.colors.bd};
+}
+
+.easycaptcha.colors .answer {
+  height:{math equation="s+s*0.15*2" s=$EASYCAPTCHA.colors.size}px;
+  width:{math equation="i*(s+s*0.15*2)" s=$EASYCAPTCHA.colors.size i=$EASYCAPTCHA.colors.nb}px;
+}
+
+.easycaptcha.colors .item {
+  display:block;
+  float:left;
+  position:relative;
+  width:{$EASYCAPTCHA.colors.size}px;
+  height:{$EASYCAPTCHA.colors.size}px;
+  margin:{math equation="s*0.15-1" s=$EASYCAPTCHA.colors.size}px;
+  border:1px solid {$EASYCAPTCHA.colors.bd2};
+  border-radius:2px;
+  cursor:pointer;
+}
+
+.easycaptcha.colors .item [class^=item-] {
+  display:block;
+  position:absolute;
+  width:12px;
+  height:12px;
+  line-height:10px;
+  font-size:12px;
+  text-align:right;
+  right:0;
+  cursor:pointer;
+  background:{$EASYCAPTCHA.colors.ar2};
+  color:{$EASYCAPTCHA.colors.ar1};
+  border-radius:2px;
+  opacity:0.8;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+  .easycaptcha.colors .item [class^=item-]:hover {
+    opacity:1;
+  }
+  .easycaptcha.colors .item .item-next {
+    top:0;
+  }
+  .easycaptcha.colors .item .item-prev {
+    bottom:0;
+  }

@@ -1,0 +1,21 @@
+<script>
+var scope = function() {
+      this.eval = function(expr) {
+            eval('var result = ' + expr + ';');
+          return result;
+      }
+    };
+
+function test() {
+     var that = new scope();
+    
+    (function(){
+        that.x = 'foo';
+        that.y = 'bar';
+    }());
+    
+    console.log(that.eval('x+":"+y'));
+}
+
+test();
+</script>

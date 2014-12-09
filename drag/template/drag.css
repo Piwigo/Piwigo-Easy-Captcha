@@ -1,4 +1,4 @@
-#easycaptcha, #easycaptcha_noscript {
+.easycaptcha.drag, .easycaptcha.noscript {
   display: inline-block;
   position: relative;
   padding: 10px;
@@ -10,8 +10,9 @@
   background: -o-linear-gradient(top, {$EASYCAPTCHA.drag.bg1} 0%, {$EASYCAPTCHA.drag.bg2} 100%);
   background: linear-gradient(to bottom, {$EASYCAPTCHA.drag.bg1} 0%, {$EASYCAPTCHA.drag.bg2} 100%);
   color: {$EASYCAPTCHA.drag.txt};
+  border:1px solid {$EASYCAPTCHA.drag.bd};
 }
-#easycaptcha .drag_item {
+.easycaptcha.drag .drag_item {
   position: absolute;
   top: 15px;
   width: {$EASYCAPTCHA.drag.size}px;
@@ -22,20 +23,20 @@
   z-index: 10;
   cursor: move;
 }
-#easycaptcha .drag_item.active {
+.easycaptcha.drag .drag_item.active {
   z-index: 100;
   opacity: 0.75;
 }
-#easycaptcha .drag_item img {
+.easycaptcha.drag .drag_item img {
   width: {$EASYCAPTCHA.drag.size}px;
   height: {$EASYCAPTCHA.drag.size}px;
   border-radius: 5px;
 }
-#easycaptcha .drop_zone {
+.easycaptcha.drag .drop_zone {
   padding: 5px;
   width: {$EASYCAPTCHA.drag.size}px;
   height: {$EASYCAPTCHA.drag.size}px;
-  margin-left: {math equation='15+(x+5)*y' x=$EASYCAPTCHA.drag.size y=$EASYCAPTCHA.drag.nb}px;
+  margin-left: {math equation="s*0.2+s*1.2*i" s=$EASYCAPTCHA.drag.size i=$EASYCAPTCHA.drag.nb}px;
   line-height: {$EASYCAPTCHA.drag.size}px;
   background: {$EASYCAPTCHA.drag.bg1};
   background: -webkit-linear-gradient(bottom, {$EASYCAPTCHA.drag.bg1} 0%, {$EASYCAPTCHA.drag.bg2} 100%);
@@ -49,10 +50,10 @@
   text-transform: uppercase;
   color: {$EASYCAPTCHA.drag.txt};
 }
-#easycaptcha .drop_zone.active {
+.easycaptcha.drag .drop_zone.active {
   background: {$EASYCAPTCHA.drag.sel};
 }
-#easycaptcha .drop_zone.valid {
+.easycaptcha.drag .drop_zone.valid {
   background: {$EASYCAPTCHA.drag.sel};
   box-shadow: 0 0 0 2px {$EASYCAPTCHA.drag.sel};
 }

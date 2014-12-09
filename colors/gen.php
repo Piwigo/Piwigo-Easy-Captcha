@@ -8,12 +8,12 @@ if (isset($_GET['admin']))
 {
   is_admin() or die('Hacking attempt!');
   
-  $conf['EasyCaptcha']['tictac'] = array_merge($conf['EasyCaptcha']['tictac'], $_GET);
+  $conf['EasyCaptcha']['colors'] = array_merge($conf['EasyCaptcha']['colors'], $_GET);
 }
 
 include_once(EASYCAPTCHA_PATH . 'include/functions.inc.php');
-include_once(EASYCAPTCHA_PATH . 'tictac/CaptchaTictac.class.php');
+include_once(EASYCAPTCHA_PATH . 'colors/CaptchaColors.class.php');
 
-$captcha = new CaptchaTicTac();
+$captcha = new CaptchaColors();
 
-$captcha->generate(isset($_GET['cross']) ? intval($_GET['cross']) : 0, isset($_GET['admin']));
+$captcha->generate(isset($_GET['admin']));

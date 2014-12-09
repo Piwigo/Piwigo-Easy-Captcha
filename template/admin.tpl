@@ -14,94 +14,70 @@
 
 {footer_script}
 // multiselect
-$('[name="activate_on[]"]').selectize({
+$('[name="activate_on[]"], [name="challenges[]"]').selectize({
   plugins: ['remove_button']
 });
 
 // Spectrum settings
-$.extend($.fn.spectrum.defaults, {
+$("[data-colorpicker]").spectrum({
     showInput: true,
-    showPalette: true,
     localStorageKey: "spectrum.easycaptcha",
     showInitial: true,
-    preferredFormat: "hex6",
+    preferredFormat: "hex6"
 });
-
-// Tic-tac-toe preview
-$('.preview-tictac').on('change', function() {
-    var inputs = ['size','bg1','bg2','bd','obj','sel'],
-        url = '{$EASYCAPTCHA_PATH}tictac/gen_admin.php?t='+ new Date().getTime();
-
-    for (var i=0; i<inputs.length; i++) {
-        url+= '&'+ inputs[i] +'='+ encodeURIComponent($('input[name="tictac['+ inputs[i] +']"]').val());
-    }
-
-    $('#preview-tictac').attr('src', url);
-});
-$('.preview-tictac').eq(0).trigger('change');
-
-// Drag & drop preview
-var themes = {
-{foreach from=$THEMES key=theme item=params}
-  '{$theme}': '{$EASYCAPTCHA_PATH}drag/{$theme}/{$params.image}',
-{/foreach}
-};
-
-$('.preview-drag').on('change', function() {
-    // style
-    var inputs = ['size','nb','bg1','bg2','obj','sel','bd1','bd2','txt'],
-        style = $('#drag_style_src').text(),
-        search, replace;
-
-    for (var i=0; i<inputs.length; i++) {
-        search = '{ldelim}\\$EASYCAPTCHA.drag\\.'+ inputs[i] +'}';
-        replace = $('input[name="drag['+ inputs[i] +']"]').val();
-        style = style.replace(new RegExp(search, 'g'), replace);
-    }
-
-    var x = parseInt($('input[name="drag[size]"]').val()),
-        y = parseInt($('input[name="drag[nb]"]').val());
-
-    search = '{ldelim}math equation=\'15+(x+5)*y\' x=$EASYCAPTCHA.drag.size y=$EASYCAPTCHA.drag.nb}',
-    replace = 15+(x+5)*y;
-    style = style.replace(search, replace);
-
-    $('#drag_style').text(style);
-
-    // content
-    $('#easycaptcha .drag_item').remove();
-    var html = '',
-        image = themes[$('input[name="drag[theme]"]').val()];
-    for (var i=0; i<y; i++) {
-        html+=
-        '<div class="drag_item" style="left:'+ (10+(x+5)*i) +'px;">'+
-          '<img src="'+ image +'">'+
-        '</div>';
-    }
-    $('#easycaptcha').prepend(html);
-});
-$('#drag_style').appendTo('head'); // move to last position to have priority
-$('.preview-drag').eq(0).trigger('change');
-
-$('#easycaptcha .drop_zone').on({
-    'mouseenter': function() { $(this).addClass('valid'); },
-    'mouseleave': function() { $(this).removeClass('valid'); },
-});
-
-// Drag & drop theme
-$('.theme').on('click', function() {
-  $('.theme').removeClass('selected');
-  $(this).addClass('selected');
-  $('input[name="drag[theme]"]').val($(this).attr('title')).trigger('change');
-});
-$('.theme .title span').css('background-color', $('#content').css('background-color'));
-$('.theme .count span').css('background-color', $('#content').css('background-color'));
 
 // show previews
 $('.preview').prevAll('a').on('click', function() {
     $(this).hide();
     $(this).nextAll('.preview').slideDown();
 });
+
+$('.theme .title span').css('background-color', $('#content').css('background-color'));
+$('.theme .count span').css('background-color', $('#content').css('background-color'));
+
+{literal}
+function preview_css_template(options) {
+    var style = jQuery(options.id + '_src').text();
+    
+    // replace direct variables
+    jQuery.each(options.inputs, function(key, value) {
+        var regex = '{\\$' + options.prefix.replace(/\./, '\\.') + '\\.' + key + '}';
+        
+        style = style.replace(new RegExp(regex, 'g'), value);
+    });
+    
+    // parse equations
+    var regex = '{math equation=["\']{1}([^"\']+)["\']{1}([^}]+)}';
+    
+    style = style.replace(new RegExp(regex, 'g'),
+      function(string, equation, variables) {
+          var vars = {},
+              regex = '\\s+(\\w+)=\\$' + options.prefix.replace(/\./, '\\.') + '\\.(\\w+)';
+              
+          variables.replace(new RegExp(regex, 'g'), function(string, key, value) {
+              vars[key] = parseFloat(options.inputs[value]);
+          });
+          console.log(options.prefix, vars);
+          for (var key in vars) {
+            eval('var ' + key + ' = ' + vars[key] + ';');
+          }
+
+          eval('var result = ' + equation + ';');
+          return result;
+      });
+    
+    jQuery(options.id).text(style);
+}
+
+function preview_image(options) {
+    var url = options.url + '&t='+ new Date().getTime();
+  
+    $.each(options.inputs, function(key, value) {
+        url+= '&' + key + '=' + encodeURIComponent(value);
+    });
+    $(options.img).attr('src', url);
+}
+{/literal}
 {/footer_script}
 
 
@@ -115,18 +91,8 @@ $('.preview').prevAll('a').on('click', function() {
 
   <ul>
     <li>
-      <b><label for="guest_only">{'Only for unauthenticated users'|translate}</label></b>
       <input type="checkbox" name="guest_only" id="guest_only" {if $easycaptcha.guest_only}checked{/if}>
-    </li>
-    <li>
-      <b>{'Activate on'|translate}</b>
-      <select name="activate_on[]" multiple placeholder="{'Nowhere'|translate}">
-        <option value="picture" {if $easycaptcha.activate_on.picture}selected{/if}>{'Picture comments'|translate}</option>
-        {if $loaded.category}<option value="category" {if $easycaptcha.activate_on.category}selected{/if}>{'Album comments'|translate}</option>{/if}
-        <option value="register" {if $easycaptcha.activate_on.register}selected{/if}>{'Register form'|translate}</option>
-        {if $loaded.contactform}<option value="contactform" {if $easycaptcha.activate_on.contactform}selected{/if}>{'Contact form'|translate}</option>{/if}
-        {if $loaded.guestbook}<option value="guestbook" {if $easycaptcha.activate_on.guestbook}selected{/if}>{'Guestbook'|translate}</option>{/if}
-      </select>
+      <b><label for="guest_only">{'Only for unauthenticated users'|translate}</label></b>
     </li>
     <li>
       <b>{'Comments action'|translate}</b>
@@ -134,114 +100,32 @@ $('.preview').prevAll('a').on('click', function() {
       <label><input type="radio" name="comments_action" value="moderate" {if $easycaptcha.comments_action == 'moderate'}checked="checked"{/if}> {'Moderate'|translate}</label>
     </li>
     <li>
+      <b>{'Activate on'|translate}</b>
+      <select name="activate_on[]" multiple placeholder="{'Nowhere'|translate}">
+        <option value="picture" {if $easycaptcha.activate_on.picture}selected{/if}>{'Picture comments'|translate}</option>
+        {if $easycaptcha_loaded.category}<option value="category" {if $easycaptcha.activate_on.category}selected{/if}>{'Album comments'|translate}</option>{/if}
+        <option value="register" {if $easycaptcha.activate_on.register}selected{/if}>{'Register form'|translate}</option>
+        {if $easycaptcha_loaded.contactform}<option value="contactform" {if $easycaptcha.activate_on.contactform}selected{/if}>{'Contact form'|translate}</option>{/if}
+        {if $easycaptcha_loaded.guestbook}<option value="guestbook" {if $easycaptcha.activate_on.guestbook}selected{/if}>{'Guestbook'|translate}</option>{/if}
+      </select>
+    </li>
+    <li>
       <b>{'Challenge'|translate}</b>
-      <label><input type="radio" name="challenge" value="tictac" {if $easycaptcha.challenge == 'tictac'}checked="checked"{/if}> {'Tic-tac-toe minigame'|translate}</label>
-      <label><input type="radio" name="challenge" value="drag" {if $easycaptcha.challenge == 'drag'}checked="checked"{/if}> {'Image drag & drop'|translate}</label>
-      <label><input type="radio" name="challenge" value="random" {if $easycaptcha.challenge == 'random'}checked="checked"{/if}> {'Random'|translate}</label>
+      <select name="challenges[]" multiple placeholder="{'Choose at least one challenge'|translate}">
+        <option value="tictac" {if in_array('tictac', $easycaptcha.challenges)}selected{/if}>{'Tic-tac-toe minigame'|translate}</option>
+        <option value="drag" {if in_array('drag', $easycaptcha.challenges)}selected{/if}>{'Image drag & drop'|translate}</option>
+        <option value="colors" {if in_array('colors', $easycaptcha.challenges)}selected{/if}>{'Colors selection'|translate}</option>
+      </select>
     </li>
   </ul>
 
-  <fieldset>
-    <legend>{'Tic-tac-toe options'|translate}</legend>
+{foreach from=$easycaptcha_modules item=module}
+  {include file=$EASYCAPTCHA_ABS_PATH|cat:$module|cat:'/template/admin.tpl'}
+{/foreach}
 
-    <ul>
-      <li>
-        <b>{'Image size'|translate}</b>
-        <input type="number" name="tictac[size]" value="{$easycaptcha.tictac.size}" min=32 max=256 class="preview-tictac">
-      </li>
-      <li>
-        <b>{'Colors'|translate}</b>
-        <table class="colors">
-          <tr>
-            <td>{'Background'|translate} 1</td>
-            <td>{'Background'|translate} 2</td>
-            <td>{'Border'|translate}</td>
-            <td>{'Marks'|translate}</td>
-            <td>{'Selection'|translate}</td>
-          </tr>
-          <tr>
-            <td><input type="color" name="tictac[bg1]" value="{$easycaptcha.tictac.bg1}" class="preview-tictac" size="7"></td>
-            <td><input type="color" name="tictac[bg2]" value="{$easycaptcha.tictac.bg2}" class="preview-tictac" size="7"></td>
-            <td><input type="color" name="tictac[bd]" value="{$easycaptcha.tictac.bd}" class="preview-tictac" size="7"></td>
-            <td><input type="color" name="tictac[obj]" value="{$easycaptcha.tictac.obj}" class="preview-tictac" size="7"></td>
-            <td><input type="color" name="tictac[sel]" value="{$easycaptcha.tictac.sel}" class="preview-tictac" size="7"></td>
-          </tr>
-        </table>
-      </li>
-      <li>
-        <b>&nbsp;</b>
-        <a class="buttonLike">{'Preview'|translate}</a>
-        <div class="preview">
-          <img id="preview-tictac" src="">
-        </div>
-      </li>
-    </ul>
-  </fieldset>
-
-  <fieldset>
-    <legend>{'Drag & drop options'|translate}</legend>
-
-    <div class="warnings my-warnings">
-      <ul><li>{'This challenge requires that JavaScript is enabled on the visitor browser. About 1% of Internet users have Javascript disabled.'|translate}</li></ul>
-    </div>
-
-    <ul>
-      <li>
-        <b>{'Theme'|translate}</b>
-        {foreach from=$THEMES key=theme item=params}
-        <a class="theme {if $easycaptcha.drag.theme == $theme}selected{/if}" title="{$theme}">
-          <div class="title"><span>{$theme|ucfirst}</span></div>
-          <div class="count"><span>({$params.count})</span></div>
-          <img src="{$EASYCAPTCHA_PATH}drag/{$theme}/{$params.image}">
-        </a>
-        {/foreach}
-        <input type="hidden" name="drag[theme]" value="{$easycaptcha.drag.theme}" class="preview-drag">
-      </li>
-      <li>
-        <b>{'Image size'|translate}</b>
-        <label><input type="number" name="drag[size]" value="{$easycaptcha.drag.size}" min=24 max=128 class="preview-drag"></label>
-      </li>
-      <li>
-        <b>{'Number of images'|translate}</b>
-        <label><input type="number" name="drag[nb]" value="{$easycaptcha.drag.nb}" min=3 max=10 class="preview-drag"></label>
-      </li>
-      <li>
-        <b>{'Colors'|translate}</b>
-        <table class="colors">
-          <tr>
-            <td>{'Background'|translate} 1</td>
-            <td>{'Background'|translate} 2</td>
-            <td>{'Image'|translate}</td>
-            <td>{'Image border'|translate}</td>
-            <td>{'Drop'|translate}</td>
-            <td>{'Drop border'|translate}</td>
-            <td>{'Text'|translate}</td>
-          </tr>
-          <tr>
-            <td><input type="color" name="drag[bg1]" value="{$easycaptcha.drag.bg1}" class="preview-drag" size="7"></td>
-            <td><input type="color" name="drag[bg2]" value="{$easycaptcha.drag.bg2}" class="preview-drag" size="7"></td>
-            <td><input type="color" name="drag[obj]" value="{$easycaptcha.drag.obj}" class="preview-drag" size="7"></td>
-            <td><input type="color" name="drag[bd1]" value="{$easycaptcha.drag.bd1}" class="preview-drag" size="7"></td>
-            <td><input type="color" name="drag[sel]" value="{$easycaptcha.drag.sel}" class="preview-drag" size="7"></td>
-            <td><input type="color" name="drag[bd2]" value="{$easycaptcha.drag.bd2}" class="preview-drag" size="7"></td>
-            <td><input type="color" name="drag[txt]" value="{$easycaptcha.drag.txt}" class="preview-drag" size="7"></td>
-          </tr>
-        </table>
-      </li>
-      <li>
-        <b>&nbsp;</b>
-        <a class="buttonLike">{'Preview'|translate}</a>
-        <div class="preview">
-          {$easycaptcha.challenge = 'drag'}
-          {include file=$EASYCAPTCHA_ABS_PATH|cat:'template/common.inc.tpl' EASYCAPTCHA=$easycaptcha}
-          {$smarty.capture.easycaptcha}
-        </div>
-      </li>
-    </ul>
-  </fieldset>
 </fieldset>
 
-<p class="formButtons"><input class="submit" type="submit" value="{'Submit'|translate}" name="submit"></p>
+  <p class="formButtons"><input class="submit" type="submit" value="{'Submit'|translate}" name="submit"></p>
 </form>
 
 <div style="text-align:right;">
@@ -254,12 +138,3 @@ $('.preview').prevAll('a').on('click', function() {
     [<a href="http://bgrins.github.io/spectrum" class="externalLink">Spectrum.js</a>]
     [<a href="http://threedubmedia.com" class="externalLink">jQuery.events</a>]
 </div>
-
-
-{* <!-- weird thing to update bunch of CSS --> *}
-{html_head}
-<style id="drag_style"></style>
-<script type="text/template" id="drag_style_src">
-{$DRAG_CSS}
-</script>
-{/html_head}

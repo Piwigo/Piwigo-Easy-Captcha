@@ -3,7 +3,7 @@
 $.drop({ mode:true });
 Math.bounds = function(a, b, c) { return Math.max(a, Math.min(b, c)); }
 
-var $easycaptcha = $('#easycaptcha').show();
+var $easycaptcha = $('.easycaptcha.drag').show();
 
 $easycaptcha.find('.drag_item')
   .each(function() {

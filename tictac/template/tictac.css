@@ -1,23 +1,23 @@
-#easycaptcha table {
+.easycaptcha.tictac table {
   width: {$EASYCAPTCHA.tictac.size}px;
   height: {$EASYCAPTCHA.tictac.size}px;
   border-collapse: collapse;
   display: inline-block;
   margin: 0;
 }
-#easycaptcha td {
+.easycaptcha.tictac td {
   border: none;
   padding: 0;
 }
-#easycaptcha label {
+.easycaptcha.tictac label {
   display: block;
   width: {math equation="floor(x/3)" x=$EASYCAPTCHA.tictac.size}px;
   height: {math equation="floor(x/3)" x=$EASYCAPTCHA.tictac.size}px;
-  cursor: url('../tictac/gen.php?cross=96') 16 16, pointer;
+  cursor: url('../gen.php?cross=96') 16 16, pointer;
 }
-#easycaptcha input {
+.easycaptcha.tictac input {
   display: none;
 }
-#easycaptcha label.selected {
-  background: url('../tictac/gen.php?cross={$EASYCAPTCHA.tictac.size}') no-repeat;
+.easycaptcha.tictac label.selected {
+  background: url('../gen.php?cross={$EASYCAPTCHA.tictac.size}') no-repeat;
 }

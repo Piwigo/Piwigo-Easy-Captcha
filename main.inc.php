@@ -26,8 +26,8 @@ if (mobile_theme())
   return;
 }
 
-define('EASYCAPTCHA_PATH' ,   PHPWG_PLUGINS_PATH . 'EasyCaptcha/');
-define('EASYCAPTCHA_ADMIN',   get_root_url() . 'admin.php?page=plugin-EasyCaptcha');
+define('EASYCAPTCHA_PATH' , PHPWG_PLUGINS_PATH . 'EasyCaptcha/');
+define('EASYCAPTCHA_ADMIN', get_root_url() . 'admin.php?page=plugin-EasyCaptcha');
 
 
 add_event_handler('init', 'easycaptcha_init');
@@ -47,7 +47,9 @@ else
 function easycaptcha_init()
 {
   global $conf;
+  
   $conf['EasyCaptcha'] = safe_unserialize($conf['EasyCaptcha']);
+  $conf['EasyCaptcha_modules'] = array('tictac', 'drag', 'colors');
 
   load_language('plugin.lang', EASYCAPTCHA_PATH);
 }
@@ -88,6 +90,7 @@ function easycaptcha_document_init()
     }
   }
 }
+
 function easycaptcha_register_init()
 {
   global $conf;
