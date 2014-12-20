@@ -10,7 +10,6 @@ $lang['Picture comments'] = 'Bildkommentare';
 $lang['Register form'] = 'Registrierungs-Formular ';
 $lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Um festzustellen, dass du ein Mensch bist, bitte <b>%s</b> in das äußerste rechte Kästchen platzieren.';
 $lang['You must activate JavaScript in your browser in order to be able to add a comment, sorry for the inconvenience.'] = 'Um einen Kommentar zu verfassen, muss JavaScript aktiviert sein. Entschuldigen Sie bitte die Umstände.';
-Ungefähr 1% aller Internetnutzer haben JavaScript deaktiviert.';
 $lang['We detected that Crypto Captcha plugin is available on your gallery. Both plugins can be used at the same time, but you should not under any circumstances activate both of them on the same page.'] = 'Es wurde festgestellt, dass das Crypto Captcha Plugin in deiner Gallerie verfügbar ist. Beide Plugins können zeitgleich benutzt werden, aber auf keinen Fall dürfen beide auf der gleichen Seite aktiviert sein.';
 $lang['Tic-tac-toe options'] = 'Tic-Tac-Toe-Optionen';
 $lang['Background'] = 'Hintergrund';
