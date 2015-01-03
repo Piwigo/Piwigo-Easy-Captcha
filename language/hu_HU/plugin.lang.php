@@ -42,3 +42,4 @@ $lang['Number of colors'] = 'Színek száma';
 $lang['To verify you are a human, please beat the game.'] = 'Hogy tudjuk, ember vagy: oldjad meg ezt a játékot.';
 $lang['To verify you are a human, please choose the closest color for each symbol.'] = 'Hogy tudjuk, ember vagy: válasszad ki a jelhez legközelebbi színt';
 $lang['To verify you are a human, please place the <b>%s</b> in the most right box bellow.'] = 'Hogy tudjuk, ember vagy: tedd a <b>%s</b> -t a jobb oldali dobozba';
+$lang['Arrow background'] = 'A nyíl háttér színe';
