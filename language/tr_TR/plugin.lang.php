@@ -40,3 +40,6 @@ $lang['Arrow'] = 'Ok';
 $lang['Arrow background'] = 'ok arka plan';
 $lang['Colors selection'] = 'Renk seçimi';
 $lang['Number of colors'] = 'Renk numaraları';
+$lang['Choose at least one challenge'] = 'Zorunluluklardan birini seçmelisiniz';
+$lang['To verify you are a human, please beat the game.'] = 'Bir kullanıcı olduğunuzu doğrulamak için oyunu, kazanınız';
+$lang['To verify you are a human, please choose the closest color for each symbol.'] = 'Bir kullanıcı olduğunuzu doğrulamak için, her sembol için en yakın rengi seçiniz';
