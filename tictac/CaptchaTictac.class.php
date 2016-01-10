@@ -61,7 +61,10 @@ class CaptchaTictac
       $this->props['bd_size']/= 2;
 
       $img = imagecreatetruecolor($this->props['box_size'], $this->props['box_size']);
-      imageantialias($img, true);
+      if (function_exists('imageantialias'))
+      {
+        imageantialias($img, true);
+      }
 
       $bg = imagecolorallocatehex($img, $conf['EasyCaptcha']['tictac']['bg1']);
 
@@ -81,7 +84,10 @@ class CaptchaTictac
 
       // create image
       $img = imagecreatetruecolor($this->props['size'], $this->props['size']);
-      imageantialias($img, true);
+      if (function_exists('imageantialias'))
+      {
+        imageantialias($img, true);
+      }
 
       // background
       $bg_start = hex2rgb($conf['EasyCaptcha']['tictac']['bg1']);
